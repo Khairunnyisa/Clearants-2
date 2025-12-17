@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --background: #f9fafb;
+    /* PRIMARY */
+    --primary: #FF3150;
+    --secondary: #C4D0DC;
+    --light-secondary: #E8ECF2;
+    --dark-grey: #394C60;
+    --black: #090D10;
+    --white: #ffffff;
+
+
+    --font-body: "Inter", sans-serif;
+    --font-title: "Montserrat", sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .primary{
+    color: var(--primary);
+  }
+
+  .secondary{
+    color: var(--dark-grey);
+  }
+
+  .secondary2{
+    color: var(--light-secondary);
+  }
+
+  .black{
+    color: var(--black);
+  }
+  .white{
+    color: var(--white);
+  }
+
+  .bg-secondary{
+    background-color: var(--secondary);
+  }
+
+  .light-secondary{
+    background-color: var(--light-secondary);
+  }
+
+  .grey-outline{
+    border: solid 2px var(--secondary);
+  }
+
+  .btn-primary{
+    font-weight: 500;
+    background-color: var(--primary);
+    color: white;
+    font: var(--font-body);
+  }
+
+  .font-title {
+    font-family: var(--font-title);
+    font-weight:600;
+    font-size: 48px;
+  }
+
+  .font-subtitle {
+    font-family: var(--font-title);
+    font-weight:600;
+    font-size: 40px;
+  }
+
+  .font-subtitle2 {
+    font-family: var(--font-title);
+    font-weight:600;
+    font-size: 20px;
+  }
+
+  .font-desc {
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+}
