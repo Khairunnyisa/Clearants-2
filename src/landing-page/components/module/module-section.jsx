@@ -12,7 +12,6 @@ export default function ModulesSection() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("application");
 
-  // 🔑 SYNC URL HASH → TAB (INI YANG BIKIN WORK)
   useEffect(() => {
     const hash = location.hash;
 
@@ -57,7 +56,6 @@ export default function ModulesSection() {
       id="modules"
       className="relative flex justify-center mt-[200px] mb-20"
     >
-      {/* ✅ BACKGROUND ABU (BALIK LAGI, TIDAK DIUBAH) */}
       <svg
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[1000px] z-0"
         viewBox="0 0 1440 900"
@@ -82,7 +80,6 @@ export default function ModulesSection() {
       </svg>
 
       <div className="relative z-10 w-[90%] max-w-6xl px-6 py-40">
-        {/* HEADER */}
         <div className="text-center mb-6">
           <h2 className="font-subtitle black">
             Explore Our Powerful <span className="primary">Modules</span>
@@ -93,7 +90,6 @@ export default function ModulesSection() {
           </p>
         </div>
 
-        {/* TAB BUTTON */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {[
             { id: "application", label: "Application Security" },

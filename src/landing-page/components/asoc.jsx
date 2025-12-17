@@ -16,9 +16,7 @@ export default function AsocSection() {
       />
 
       <div className="relative text-center max-w-3xl flex flex-col items-center">
-        <h2 className="font-title white">
-          ASOC
-        </h2>
+        <h2 className="font-title white">ASOC</h2>
 
         <div className="inline-block bg-white text-[#E94E59] font-semibold text-2xl mt-15 md:text-3xl px-10 py-5 rounded-full shadow-lg mb-10 relative z-10">
           Centralized your Security Control

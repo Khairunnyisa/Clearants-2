@@ -1,7 +1,5 @@
 import React from "react";
 
-// import videoDummy from "../../assets/video.png";
-
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex justify-center items-center bg-[#0B111C] text-white px-6 md:px-10 lg:px-16 py-5 overflow-visible">

@@ -1,4 +1,3 @@
-// src/components/FAQSection.jsx
 import React, { useState } from "react";
 
 const FAQSection = () => {

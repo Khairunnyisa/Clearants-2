@@ -145,7 +145,6 @@ export default function Navbar() {
               </svg>
             </span>
 
-            {/* DROPDOWN CARD */}
             <div
               className="
                 absolute left-1/2 -translate-x-1/2 top-full mt-6
@@ -157,7 +156,6 @@ export default function Navbar() {
               "
             >
               <div className="grid grid-cols-3 rounded-2xl overflow-hidden shadow-xl">
-                {/* LEFT */}
                 <div className="bg-slate-200 p-4">
                   <div className="h-full rounded-xl bg-[#EF4D5A] p-5 flex flex-col justify-between text-white">
                     <div>
@@ -211,7 +209,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* CTA */}
         <div className="hidden md:flex">
           <button
             className={`px-7 py-3 rounded-[10px] text-sm font-medium transition
@@ -225,7 +222,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* MOBILE TOGGLE */}
         <button
           onClick={() => setOpen(!open)}
           className={`${isHeroStyle ? "text-white" : "text-black"} md:hidden`}

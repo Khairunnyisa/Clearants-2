@@ -1,6 +1,5 @@
 export default function CdIntegration() {
   return (
-    
     <section className="relative w-full lg:px-20 overflow-hidden ">
       <img
         src="images/circle-gray.svg"
@@ -23,10 +22,26 @@ export default function CdIntegration() {
           </p>
 
           <div className="flex items-center justify-between bg-gray-100 rounded-xl p-4 w-fit shadow-sm">
-            <img src="images/logo/jenkins.png" alt="Jenkins" className="h-10 mx-2" />
-            <img src="images/logo/github.png" alt="GitHub" className="h-10 mx-2" />
-            <img src="images/logo/bamboo.png" alt="GitLab" className="h-10 mx-2" />
-            <img src="images/logo/tekton.png" alt="Bitbucket" className="h-10 mx-2" />
+            <img
+              src="images/logo/jenkins.png"
+              alt="Jenkins"
+              className="h-10 mx-2"
+            />
+            <img
+              src="images/logo/github.png"
+              alt="GitHub"
+              className="h-10 mx-2"
+            />
+            <img
+              src="images/logo/bamboo.png"
+              alt="GitLab"
+              className="h-10 mx-2"
+            />
+            <img
+              src="images/logo/tekton.png"
+              alt="Bitbucket"
+              className="h-10 mx-2"
+            />
           </div>
         </div>
 
@@ -39,7 +54,6 @@ export default function CdIntegration() {
         </div>
       </div>
 
-      {/* === BAGIAN BAWAH === */}
       <div className="grid md:grid-cols-3 gap-6 mt-20 relative z-10">
         <div className="relative rounded-2xl overflow-hidden group">
           <img
@@ -50,9 +64,9 @@ export default function CdIntegration() {
           <div className="absolute top-8 left-8 right-4 white z-10">
             <h3 className="text-xl font-semibold">Notification Integration</h3>
             <p className="font-desc white mt-1 max-w-sm">
-              Send real-time system alerts and updates directly to Telegram or email.
-              Ensure your team is instantly informed and able to respond swiftly to
-              critical events.
+              Send real-time system alerts and updates directly to Telegram or
+              email. Ensure your team is instantly informed and able to respond
+              swiftly to critical events.
             </p>
           </div>
         </div>
@@ -66,9 +80,9 @@ export default function CdIntegration() {
           <div className="absolute top-8 left-8 right-4 text-white z-10">
             <h3 className="text-xl font-semibold">Notification Integration</h3>
             <p className="font-desc white mt-1 max-w-sm">
-              Send real-time system alerts and updates directly to Telegram or email.
-              Ensure your team is instantly informed and able to respond swiftly to
-              critical events.
+              Send real-time system alerts and updates directly to Telegram or
+              email. Ensure your team is instantly informed and able to respond
+              swiftly to critical events.
             </p>
           </div>
         </div>
@@ -82,9 +96,9 @@ export default function CdIntegration() {
           <div className="absolute top-8 left-8 right-4 text-white z-10">
             <h3 className="text-xl font-semibold">Notification Integration</h3>
             <p className="font-desc white mt-1 max-w-sm">
-              Send real-time system alerts and updates directly to Telegram or email.
-              Ensure your team is instantly informed and able to respond swiftly to
-              critical events.
+              Send real-time system alerts and updates directly to Telegram or
+              email. Ensure your team is instantly informed and able to respond
+              swiftly to critical events.
             </p>
           </div>
         </div>
