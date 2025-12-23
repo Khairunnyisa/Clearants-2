@@ -6,7 +6,7 @@ const ContactSection = () => {
         alt="Background Shape"
         className="
           absolute inset-0 
-          w-[95%] 
+          w-[75%] 
           h-auto 
           top-10 
           left-1/2 
