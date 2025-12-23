@@ -83,27 +83,21 @@ export default function DynamicSecurity() {
         </div>
 
         {/* RIGHT WIDE CARD */}
-        <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
-          <div className="flex gap-3 h-full">
-            {/* IMAGE LEFT */}
-            <div className="relative flex-1 rounded-xl overflow-hidden bg-gray-100">
-              <img
-                src="images/content/module/api-card.png"
-                alt="API Dashboard"
-                className="absolute inset-0 w-full h-full  object-top"
-              />
-            </div>
+       <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
+  <div className="flex gap-3 h-full">
+      <img
+        src="images/content/module/api-card.png"
+        alt="API Dashboard"
+        className="w-full h-full object-contain"
+      />
 
-            {/* IMAGE RIGHT */}
-            <div className="relative flex-1 rounded-xl overflow-hidden bg-gray-100">
-              <img
-                src="images/content/module/web-card.png"
-                alt="API Dashboard Detail"
-                className="absolute inset-0 w-full h-full  object-top"
-              />
-            </div>
-          </div>
-        </div>
+      <img
+        src="images/content/module/web-card.png"
+        alt="API Dashboard Detail"
+        className="w-full h-full object-contain"
+      />
+  </div>
+</div>
       </div>
     </div>
   );
