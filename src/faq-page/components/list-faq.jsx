@@ -37,6 +37,7 @@ const FaqList = () => {
       q: "Is onboarding difficult for new team members?",
       a: "i3GIS is designed with simplicity in mind, making onboarding quick and efficient.",
     },
+
   ];
 
   const toggleFAQ = (i) => {

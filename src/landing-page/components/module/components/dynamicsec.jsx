@@ -83,21 +83,21 @@ export default function DynamicSecurity() {
         </div>
 
         {/* RIGHT WIDE CARD */}
-       <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
-  <div className="flex gap-3 h-full">
-      <img
-        src="images/content/module/api-card.png"
-        alt="API Dashboard"
-        className="w-full h-full object-contain"
-      />
+        <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
+          <div className="flex gap-3 h-full">
+            <img
+              src="images/content/module/api-card.png"
+              alt="API Dashboard"
+              className="w-full h-full object-contain"
+            />
 
-      <img
-        src="images/content/module/web-card.png"
-        alt="API Dashboard Detail"
-        className="w-full h-full object-contain"
-      />
-  </div>
-</div>
+            <img
+              src="images/content/module/web-card.png"
+              alt="API Dashboard Detail"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,9 @@
-
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SliderSection = () => {
   const sliderRef = useRef(null);
 
- 
   const ideas = [
     {
       id: 1,
@@ -30,7 +28,6 @@ const SliderSection = () => {
     },
   ];
 
-  
   const slideLeft = () => {
     sliderRef.current.scrollBy({ left: -400, behavior: "smooth" });
   };
@@ -40,53 +37,56 @@ const SliderSection = () => {
   };
 
   return (
-    <section className="w-full py-20 px-20 relative">
-      <h2 className="text-center font-subtitle mb-12">
-        Explore <span className="primary">Idea & Insights</span>
-      </h2>
+    <section className="w-full py-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16">
+        <h2 className="text-center font-subtitle mb-12">
+          Explore <span className="primary">Idea & Insights</span>
+        </h2>
 
-      <div className="relative w-full flex items-center justify-center">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-6">
+          <button
+            onClick={slideLeft}
+            className="hidden md:flex w-14 h-14 rounded-full 
+            bg-red-500 text-white items-center justify-center 
+            hover:bg-red-600 transition"
+          >
+            <ChevronLeft size={28} />
+          </button>
 
-        <button
-          onClick={slideLeft}
-          className="absolute left-0 z-10 w-15 h-15 rounded-full bg-red-500 white flex items-center justify-center hover:bg-red-600 transition"
-        >
-          <ChevronLeft size={30} />
-        </button>
+          <div
+            ref={sliderRef}
+            className="flex gap-10 overflow-x-scroll scrollbar-hide scroll-smooth"
+          >
+            {ideas.map((item) => (
+              <div
+                key={item.id}
+                className="min-w-[350px] max-w-[350px] 
+                bg-[#E9EFF5] rounded-xl p-5 shadow-sm"
+              >
+                <img
+                  src={item.image}
+                  className="w-full h-[200px] object-cover rounded-lg"
+                  alt={item.title}
+                />
 
-        <div
-          ref={sliderRef}
-          className="flex gap-10 overflow-x-scroll scrollbar-hide scroll-smooth"
-        >
-          {ideas.map((item) => (
-            <div
-              key={item.id}
-              className="min-w-[350px] max-w-[350px] bg-[#E9EFF5] rounded-xl p-5 shadow-sm"
-            >
-              <img
-                src={item.image}
-                className="w-full h-[200px] object-cover rounded-lg"
-              />
+                <p className="font-desc text-gray-700 mt-4">{item.date}</p>
 
-              <p className="font-desc text-gray-700 mt-4">{item.date}</p>
+                <h3 className="font-subtitle2 text-lg mt-2">{item.title}</h3>
 
-              <h3 className="fonts-subtitle2 text-lg mt-2">
-                {item.title}
-              </h3>
+                <p className="font-desc secondary mt-3">{item.desc}</p>
+              </div>
+            ))}
+          </div>
 
-              <p className="font-desc secondary mt-3 ">
-                {item.desc}
-              </p>
-            </div>
-          ))}
+          <button
+            onClick={slideRight}
+            className="hidden md:flex w-14 h-14 rounded-full 
+            bg-red-500 text-white items-center justify-center 
+            hover:bg-red-600 transition"
+          >
+            <ChevronRight size={28} />
+          </button>
         </div>
-
-        <button
-          onClick={slideRight}
-          className="absolute right-0 z-10 w-15 h-15 rounded-full bg-red-500 text-white flex items-center justify-center hover:bg-red-600 transition"
-        >
-          <ChevronRight size={30} />
-        </button>
       </div>
     </section>
   );

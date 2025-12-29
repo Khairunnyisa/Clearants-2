@@ -1,14 +1,13 @@
-import React from "react";
-
 const Reports = () => {
   return (
-    <section
-      className="flex justify-center mx-10 my-30 py-15 px-5 bg-cover bg-center text-white rounded-[20px]"
-      style={{
-        backgroundImage: "url('/images/reports-bg.svg')",
-      }}
-    >
-      <div className="max-w-7xl w-full">
+    <section className="w-full my-24 px-4 sm:px-6">
+      <div
+        className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16
+                   bg-cover bg-center text-white rounded-[20px]"
+        style={{
+          backgroundImage: "url('/images/reports-bg.svg')",
+        }}
+      >
         <h2 className="text-center font-title mb-10">Reports Overview</h2>
 
         <div className="flex flex-col md:flex-row gap-12">

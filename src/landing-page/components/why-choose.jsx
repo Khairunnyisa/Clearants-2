@@ -35,46 +35,37 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section
-      className="flex flex-col md:flex-row items-start justify-center 
-w-full px-10 md:px-16 py-20 gap-1 md:gap-2 overflow-hidden"
-    >
-      <div
-        className="md:w-[45%] w-full bg-contain bg-no-repeat bg-left rounded-3xl py-14 px-10 text-white flex flex-col justify-between min-h-[800px] flex-shrink-0"
-        style={{ backgroundImage: "url('images/why-img.png')" }}
-      >
-        <div>
-          <h1 className="font-title mb-5 leading-tight">Why Choose i3GIS?</h1>
-          <p className="font-desc text-lg leading-relaxed">
-            Your All-in-One DevSecOps Tool for Business Compliance
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col space-y-8 w-full md:w-[55%]">
-        {Array.from({ length: 3 }).map((_, rowIndex) => {
-          const leftIndex = rowIndex * 2;
-          const rightIndex = rowIndex * 2 + 1;
-
-          return (
-            <div
-              key={rowIndex}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            >
-              <CardLeft
-                title={cardData[leftIndex].title}
-                desc={cardData[leftIndex].desc}
-                icon={cardData[leftIndex].icon}
-              />
-
-              <CardRight
-                title={cardData[rightIndex].title}
-                desc={cardData[rightIndex].desc}
-                icon={cardData[rightIndex].icon}
-              />
+    <section className="w-full py-20">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-10">
+          {/* LEFT / HERO */}
+          <div
+            className="w-full rounded-3xl bg-no-repeat bg-left bg-cover text-white 
+        p-12 flex flex-col justify-between min-h-[720px]"
+            style={{ backgroundImage: "url('images/why-img.png')" }}
+          >
+            <div>
+              <h1 className="font-title mb-5 leading-tight">
+                Why Choose i3GIS?
+              </h1>
+              <p className="font-desc text-lg leading-relaxed max-w-md">
+                Your All-in-One DevSecOps Tool for Business Compliance
+              </p>
             </div>
-          );
-        })}
+          </div>
+
+          <div className="overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {cardData.map((item, index) =>
+                index % 2 === 0 ? (
+                  <CardLeft key={index} {...item} />
+                ) : (
+                  <CardRight key={index} {...item} />
+                )
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -82,36 +73,34 @@ w-full px-10 md:px-16 py-20 gap-1 md:gap-2 overflow-hidden"
 
 const CardLeft = ({ title, desc, icon }) => (
   <div
-    className="rounded-xl py-4 px-8 scale-[0.96]"
+    className="h-full min-h-[210px] rounded-xl px-8 py-6 flex"
     style={{
       backgroundColor: "#e2e8f0",
       clipPath:
         "polygon(0% 20%, 0% 0%, 33% 0%, 40% 12%, 100% 12%, 100% 100%, 0% 100%)",
     }}
   >
-    <div className="flex flex-col mt-2">
-      <img src={icon} className="w-16 h-16" alt="icon" />
-      <h3 className="font-subtitle2 mt-2">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed mt-2">{desc}</p>
+    <div className="flex flex-col gap-3">
+      <img src={icon} className="w-14 h-14" alt="" />
+      <h3 className="font-subtitle2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
     </div>
   </div>
 );
 
 const CardRight = ({ title, desc, icon }) => (
   <div
-    className="rounded-xl py-4 px-8 scale-[0.96]"
+    className="h-full min-h-[210px] rounded-xl px-8 py-6 flex justify-end"
     style={{
       backgroundColor: "#e2e8f0",
       clipPath:
         "polygon(100% 20%, 100% 0%, 67% 0%, 60% 12%, 0% 12%, 0% 100%, 100% 100%)",
     }}
   >
-    <div className="flex flex-col mt-2">
-      <img src={icon} className="w-16 h-16 self-end" alt="icon" />
-      <h3 className="font-subtitle2 mt-3 text-right">{title}</h3>
-      <p className="text-gray-600 text-sm text-right leading-relaxed mt-2">
-        {desc}
-      </p>
+    <div className="flex flex-col gap-3 text-right">
+      <img src={icon} className="w-14 h-14 self-end" alt="" />
+      <h3 className="font-subtitle2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
     </div>
   </div>
 );

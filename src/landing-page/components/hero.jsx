@@ -2,50 +2,52 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center bg-[#0B111C] text-white px-6 md:px-10 lg:px-16 py-5 overflow-visible">
-      <div className="absolute inset-0  from-[#0B111C] to-[#1C0F17] opacity-90"></div>
+    <section className="relative w-full min-h-screen bg-[#0B111C] text-white overflow-visible">
+      <div className="absolute inset-0 from-[#0B111C] to-[#1C0F17] opacity-90"></div>
 
-      <div className="relative z-10 w-full max-w-7xl flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/2 space-y-6 text-center md:text-left">
-          <h1 className="font-title md:text-5xl w-[700px] leading-snug">
-            Revolutionizing <span className="primary">DevSecOps</span>
-            <br />
-            with <span className="text-[#F1FAEE]">Simplicity</span> and{" "}
-            <span className="text-[#F1FAEE]">Agility</span>
-          </h1>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-30">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 className="font-title max-w-[860px] leading-snug">
+              Revolutionizing <span className="primary">DevSecOps </span>
+              with <span className="text-[#F1FAEE]">Simplicity</span> and{" "}
+              <span className="text-[#F1FAEE]">Agility</span>
+            </h1>
 
-          <p className="font-desc">
-            Clearants is a comprehensive platform that combines security testing
-            and DevSecOps tools into one dashboard. Its modular features help
-            companies across various industries safeguard their business from
-            the development stage.
-          </p>
+            <p className="font-desc max-w-xl">
+              Clearants is a comprehensive platform that combines security
+              testing and DevSecOps tools into one dashboard. Its modular
+              features help companies across various industries safeguard their
+              business from the development stage.
+            </p>
 
-          <button className="btn-primary py-3 px-7 rounded-lg">
-            Live Demo
-          </button>
+            <button className="btn-primary py-3 px-7 rounded-lg">
+              Live Demo
+            </button>
 
-          <div className="flex justify-center md:justify-start items-center gap-8 pt-6">
-            <div>
-              <p className="font-title">100+</p>
-              <p className="font-desc primary mt-1">Users</p>
-            </div>
-            <div>
-              <p className="font-title">4y</p>
-              <p className="font-desc primary mt-1">Experience</p>
-            </div>
-            <div>
-              <p className="font-title">1000+</p>
-              <p className="font-desc primary mt-1">Projects</p>
+            <div className="flex justify-center md:justify-start items-center gap-8 pt-6">
+              <div>
+                <p className="font-title">100+</p>
+                <p className="font-desc primary mt-1">Users</p>
+              </div>
+              <div>
+                <p className="font-title">4y</p>
+                <p className="font-desc primary mt-1">Experience</p>
+              </div>
+              <div>
+                <p className="font-title">1000+</p>
+                <p className="font-desc primary mt-1">Projects</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img
-            src="images/content/hero/hero-img.png"
-            alt="hero illustration"
-            className="w-[70%] md:w-[75%] lg:w-[80%] object-contain rounded-xl"
-          />
+
+          <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+            <img
+              src="images/content/hero/hero-img.png"
+              alt="hero illustration"
+              className="w-[70%] md:w-[75%] lg:w-[80%] object-contain rounded-xl"
+            />
+          </div>
         </div>
       </div>
 

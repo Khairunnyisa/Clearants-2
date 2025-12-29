@@ -1,5 +1,3 @@
-
-
 import Navbar from "../navbar";
 import AsocSection from "./components/asoc";
 import CdIntegration from "./components/cd-integration";
@@ -12,22 +10,20 @@ import Reports from "./components/reports";
 import SliderSection from "./components/slider";
 import WhyChoose from "./components/why-choose";
 
-
 export function MainLanding() {
-    return (
-        <>
-        <Navbar/>
-       <Hero/>
-     <ModulesSection/>
-     <CdIntegration/>
-     <Reports/>
-     <WhyChoose/>
-     <SliderSection/>
-     <AsocSection/>
-     <FAQSection/>
-     <ContactSection/>
-     <Footer/>
-  
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <ModulesSection />
+      <CdIntegration />
+      <Reports />
+      <WhyChoose />
+      <SliderSection />
+      <AsocSection />
+      <FAQSection />
+      <ContactSection />
+      <Footer />
+    </>
+  );
 }

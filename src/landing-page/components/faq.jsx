@@ -46,10 +46,10 @@ const FAQSection = () => {
           <div
             key={i}
             className={`w-full transition-all duration-300 ${
-  openIndex === i
-    ? "bg-white p-7 shadow rounded-2xl"
-    : "bg-secondary p-6 rounded-full"
-}`}
+              openIndex === i
+                ? "bg-white p-7 shadow rounded-2xl"
+                : "bg-secondary p-6 rounded-full"
+            }`}
           >
             {/* Header */}
             <button
@@ -72,7 +72,6 @@ const FAQSection = () => {
               </span>
             </button>
 
-            {/* Dropdown body with animation */}
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 openIndex === i ? "max-h-40 mt-4" : "max-h-0"
