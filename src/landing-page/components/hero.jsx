@@ -7,7 +7,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-30">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 space-y-6 text-center md:text-left">
+          <div className="md:w-1/ space-y-6 text-center md:text-left">
             <h1 className="font-title max-w-[860px] leading-snug">
               Revolutionizing <span className="primary">DevSecOps </span>
               with <span className="text-[#F1FAEE]">Simplicity</span> and{" "}
@@ -27,65 +27,80 @@ const Hero = () => {
 
             <div className="flex justify-center md:justify-start items-center gap-8 pt-6">
               <div>
-                <p className="font-title">100+</p>
+                <p className="font-subtitle">100+</p>
                 <p className="font-desc primary mt-1">Users</p>
               </div>
               <div>
-                <p className="font-title">4y</p>
+                <p className="font-subtitle">4y</p>
                 <p className="font-desc primary mt-1">Experience</p>
               </div>
               <div>
-                <p className="font-title">1000+</p>
+                <p className="font-subtitle">1000+</p>
                 <p className="font-desc primary mt-1">Projects</p>
               </div>
             </div>
           </div>
 
-          <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          {/* Gambar sekarang akan nempel di pojok kanan */}
+          <div className="md:w-1/2 relative">
             <img
               src="images/content/hero/hero-img.png"
               alt="hero illustration"
-              className="w-[70%] md:w-[75%] lg:w-[80%] object-contain rounded-xl"
+              className="absolute top-1/2 right-0 -translate-y-1/2 w-[70%] md:w-[75%] lg:w-[90%] object-contain rounded-xl"
             />
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-[250px] bg-transparent">
-        <div className="absolute bottom-0 left-0 w-full z-0">
-          <div className="bg-white w-[65%] h-[90px] "></div>
-          <div className="absolute right-0 bottom-0 w-[50%] h-[150px] bg-white [clip-path:polygon(30%_0%,100%_0%,100%_100%,15%_100%)] "></div>
-        </div>
+      {/* ===================== */}
+      {/* BOTTOM CLIP PATH AREA */}
+      {/* ===================== */}
+      <div className="absolute bottom-0 left-0 w-full h-[270px] overflow-hidden">
+        {/* SVG CLIP PATH */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-full"
+          viewBox="0 0 1440 380"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="
+        M 0 200
+        L 930 200
+        L 970 110
+        L 1440 110
+        L 1440 380
+        L 0 400
+        Z
+      "
+            fill="#ffffff"
+          />
+        </svg>
 
-        <div className="absolute -bottom-25 left-0 w-full flex justify-between items-start px-12 md:px-20 py-5 translate-y-10">
-          <div className="flex pt-10 gap-18 items-start">
-            <img
-              src="images/logo/bank-mega.png"
-              alt="partner1"
-              className="h-15 opacity-80"
-            />
-            <img
-              src="images/logo/kalbe.png"
-              alt="partner2"
-              className="h-15 opacity-80"
-            />
-            <img
-              src="images/logo/merdeka.png"
-              alt="partner3"
-              className="h-15 opacity-80"
-            />
-            <img
-              src="images/logo/lintasarta.png"
-              alt="partner4"
-              className="h-15 opacity-80"
-            />
+        {/* CONTENT WRAPPER */}
+        <div className="relative z-10 w-full h-full px-12 md:px-20">
+          {/* LOGOS — KIRI */}
+          <div className="absolute left-12 md:left-20 bottom-6">
+            <div className="flex gap-18 items-center">
+              <img
+                src="images/logo/bank-mega.png"
+                className="h-15 opacity-80"
+              />
+              <img src="images/logo/kalbe.png" className="h-15 opacity-80" />
+              <img src="images/logo/merdeka.png" className="h-15 opacity-80" />
+              <img
+                src="images/logo/lintasarta.png"
+                className="h-15 opacity-80"
+              />
+            </div>
           </div>
 
-          <div className="hidden md:block rounded-tl-[50px] max-w-[500px] -translate-y-6">
+          {/* VIDEO — KANAN */}
+          <div className="hidden md:block absolute right-12 md:right-20 bottom-0 max-w-[440px]">
             <img
               src="images/content/hero/video (1).png"
               alt="dummy hero"
-              className="w-full h-auto object-contain rounded-tl-[50px] scale-110"
+              className="w-full object-contain rounded-tl-[50px]"
             />
           </div>
         </div>

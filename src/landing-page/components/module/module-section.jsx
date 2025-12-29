@@ -52,35 +52,47 @@ export default function ModulesSection() {
   };
 
   return (
-    <section
-      id="modules"
-      className="relative flex justify-center mt-[200px] mb-20"
-    >
-      <svg
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[1000px] z-0"
-        viewBox="0 0 1440 900"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="
-            M 0 120
-            Q 0 60 60 60
-            L 430 60
-            Q 460 20 520 20
-            L 920 20
-            Q 970 20 1010 60
-            L 1380 60
-            Q 1440 60 1440 120
-            L 1440 900
-            L 0 900
-            Z
-          "
-          fill="#E6EBF2"
-        />
-      </svg>
+    <section id="modules" className="relative mt-[200px] mb-20">
+  <div className="max-w-[1400px] mx-auto px-6 ">
 
-      <div className="relative z-10 w-[90%] max-w-6xl px-6 py-40">
-        <div className="text-center mb-6">
+    {/* WRAPPER BACKGROUND */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-15">
+
+      {/* SVG BACKGROUND */}
+     <svg
+  className="absolute inset-y-0 left-1/2 -translate-x-1/2 
+             w-[calc(100%+120px)] max-w-[1400px] h-full -z-10"
+  viewBox="0 0 1440 900"
+  preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="
+      M 100 140
+      Q 100 70 170 70
+      L 300 70
+      Q 380 70 460 30
+      L 980 30
+      Q 1060 70 1140 70
+      L 1270 70
+      Q 1340 70 1340 140
+      L 1340 820
+      Q 1340 880 1280 880
+      L 160 880
+      Q 100 880 100 820
+      Z
+    "
+    fill="#EEF2F6"
+  />
+</svg>
+
+
+
+
+      {/* CONTENT */}
+      <div className="relative z-10 px-6 md:px-16 py-32">
+        {/* TITLE */}
+        <div className="text-center mb-10">
           <h2 className="font-subtitle black">
             Explore Our Powerful <span className="primary">Modules</span>
           </h2>
@@ -90,7 +102,8 @@ export default function ModulesSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {/* TABS */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {[
             { id: "application", label: "Application Security" },
             { id: "dynamic", label: "Dynamic Security" },
@@ -112,8 +125,12 @@ export default function ModulesSection() {
           ))}
         </div>
 
+        {/* TAB CONTENT */}
         {renderContent()}
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 }

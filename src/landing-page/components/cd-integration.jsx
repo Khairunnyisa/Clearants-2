@@ -15,7 +15,7 @@ export default function CdIntegration() {
           <div className="lg:w-1/2 space-y-6">
             <h2 className="font-subtitle">CI/CD Integration</h2>
             <p className="font-body secondary">
-              Integrating i3gis with CI/CD tools...
+              Integrating i3gis with CI/CD tools can greatly enhance your software development and deployment processes. By incorporating security and operational considerations throughout the development lifecycle.
             </p>
           </div>
 
@@ -28,12 +28,12 @@ export default function CdIntegration() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-20">
-          <div className="relative rounded-2xl overflow-hidden group">
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
             <img
-              src="images/content/integration/ci-img1.png"
-              alt="Notification Integration"
-              className="w-full h-56 object-cover"
-            />
+    src="images/content/integration/ci-img1.png"
+    alt="Notification Integration"
+    className="w-full h-56 object-contain"
+  />
             <div className="absolute top-8 left-8 right-4 white z-10">
               <h3 className="text-xl font-semibold">
                 Notification Integration
@@ -46,11 +46,11 @@ export default function CdIntegration() {
             </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden group">
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
             <img
               src="images/content/integration/ci-img2.png"
               alt="Notification Integration"
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-contain"
             />
             <div className="absolute top-8 left-8 right-4 text-white z-10">
               <h3 className="text-xl font-semibold">
@@ -64,11 +64,11 @@ export default function CdIntegration() {
             </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden group">
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
             <img
               src="images/content/integration/ci-img3.png"
               alt="Notification Integration"
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-contain"
             />
             <div className="absolute top-8 left-8 right-4 text-white z-10">
               <h3 className="text-xl font-semibold">
