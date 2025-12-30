@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-
 const MODULE_ITEMS = [
   {
     id: "application",
@@ -31,7 +30,6 @@ const MODULE_ITEMS = [
     colSpan: "col-span-2",
   },
 ];
-
 
 const moduleTitleClass = `
   font-semibold
@@ -66,7 +64,6 @@ export default function Navbar() {
   const isAsoc = pathname === "/asoc";
   const isHeroStyle = isLanding || isAsoc;
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -80,7 +77,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- 
   const goToModule = (id) => {
     navigate(`/#modules-${id}`);
   };
@@ -116,19 +112,22 @@ export default function Navbar() {
       className={`w-full fixed top-0 left-0 z-[9999] px-6 md:px-12
       transition-all duration-500
       ${navBg}
-      ${hideNavbar ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}
+      ${
+        hideNavbar ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }
     `}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-5">
         <img src={logoSrc} alt="Clearants Logo" className="h-13" />
 
-       
         <div className="hidden md:flex items-center gap-8 font-medium">
-          <a href="/" className={`${linkColor} ${navLinkClass} ${underlineColor}`}>
+          <a
+            href="/"
+            className={`${linkColor} ${navLinkClass} ${underlineColor}`}
+          >
             Home
           </a>
 
-         
           <div className="relative group">
             <span
               className={`${linkColor} ${navLinkClass} ${underlineColor} cursor-pointer inline-flex items-center gap-1`}
@@ -141,7 +140,11 @@ export default function Navbar() {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </span>
 
@@ -198,13 +201,22 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="/asoc" className={`${linkColor} ${navLinkClass} ${underlineColor}`}>
+          <a
+            href="/asoc"
+            className={`${linkColor} ${navLinkClass} ${underlineColor}`}
+          >
             ASOC
           </a>
-          <a href="/article" className={`${linkColor} ${navLinkClass} ${underlineColor}`}>
+          <a
+            href="/article"
+            className={`${linkColor} ${navLinkClass} ${underlineColor}`}
+          >
             Article
           </a>
-          <a href="/faq" className={`${linkColor} ${navLinkClass} ${underlineColor}`}>
+          <a
+            href="/faq"
+            className={`${linkColor} ${navLinkClass} ${underlineColor}`}
+          >
             FAQ
           </a>
         </div>

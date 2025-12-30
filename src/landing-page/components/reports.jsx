@@ -1,9 +1,10 @@
+import CardBackgroundPath from "../../components/cards/cardBackgroundPath";
+
 const Reports = () => {
   return (
     <section className="w-full my-24 px-4 sm:px-6">
       <div
-        className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16
-                   bg-cover bg-center text-white rounded-[20px]"
+        className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16 bg-cover bg-center text-white rounded-[20px]"
         style={{
           backgroundImage: "url('/images/reports-bg.svg')",
         }}
@@ -12,10 +13,14 @@ const Reports = () => {
 
         <div className="flex flex-col md:flex-row gap-12">
           <div className="flex-1 relative">
-            <img
-              src="/images/reports-content1.svg"
-              alt="Executive Report Shape"
-              className="w-full h-auto pointer-events-none select-none"
+            <CardBackgroundPath
+              tabPosition="left"
+              borderRadius={20}
+              heightCorner={20}
+              isFlippedVertical
+              fill="#e2e8f0"
+              width="100%"
+              height="100%"
             />
 
             <div className="absolute inset-0 p-8 flex flex-col justify-start z-10">
@@ -58,10 +63,13 @@ const Reports = () => {
           </div>
 
           <div className="flex-1 relative">
-            <img
-              src="/images/reports-content2.svg"
-              alt="Technical Report Shape"
-              className="w-full h-auto pointer-events-none select-none"
+            <CardBackgroundPath
+              tabPosition="left"
+              borderRadius={20}
+              fill="#e2e8f0"
+              heightCorner={20}
+              width="100%"
+              height="700px"
             />
 
             <div className="absolute inset-0 p-8 flex flex-col justify-start z-10">
