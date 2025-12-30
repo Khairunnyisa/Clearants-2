@@ -10,12 +10,15 @@ export default function CdIntegration() {
         className="absolute bottom-0 right-0 w-72 opacity-30"
       />
 
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="lg:w-1/2 space-y-6">
             <h2 className="font-subtitle">CI/CD Integration</h2>
             <p className="font-body secondary">
-              Integrating i3gis with CI/CD tools can greatly enhance your software development and deployment processes. By incorporating security and operational considerations throughout the development lifecycle.
+              Integrating i3gis with CI/CD tools can greatly enhance your
+              software development and deployment processes. By incorporating
+              security and operational considerations throughout the development
+              lifecycle.
             </p>
           </div>
 
@@ -30,10 +33,10 @@ export default function CdIntegration() {
         <div className="grid md:grid-cols-3 gap-6 mt-20">
           <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
             <img
-    src="images/content/integration/ci-img1.png"
-    alt="Notification Integration"
-    className="w-full h-56 object-contain"
-  />
+              src="images/content/integration/ci-img1.png"
+              alt="Notification Integration"
+              className="w-full h-56 object-contain"
+            />
             <div className="absolute top-8 left-8 right-4 white z-10">
               <h3 className="text-xl font-semibold">
                 Notification Integration

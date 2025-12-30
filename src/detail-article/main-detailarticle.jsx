@@ -7,7 +7,7 @@ import DetailHero from "./components/hero";
 export function DetailArticle() {
   return (
      <div className="min-h-screen w-full ">  
-        {/* <Navbar /> */}
+        <Navbar />
         <DetailHero />
         <ContentArticle />
         <CardDetailArticle />

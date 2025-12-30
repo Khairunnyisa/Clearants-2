@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative w-full min-h-screen bg-[#0B111C] text-white overflow-visible">
       <div className="absolute inset-0 from-[#0B111C] to-[#1C0F17] opacity-90"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-30">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 py-30">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/ space-y-6 text-center md:text-left">
             <h1 className="font-title max-w-[860px] leading-snug">
@@ -52,11 +52,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ===================== */}
-      {/* BOTTOM CLIP PATH AREA */}
-      {/* ===================== */}
+      {/* BOTTOM CLIP */}
       <div className="absolute bottom-0 left-0 w-full h-[270px] overflow-hidden">
-        {/* SVG CLIP PATH */}
         <svg
           className="absolute bottom-0 left-0 w-full h-full"
           viewBox="0 0 1440 380"
@@ -66,8 +63,8 @@ const Hero = () => {
           <path
             d="
         M 0 200
-        L 930 200
-        L 970 110
+        L 900 200
+        L 940 110
         L 1440 110
         L 1440 380
         L 0 400
@@ -77,10 +74,8 @@ const Hero = () => {
           />
         </svg>
 
-        {/* CONTENT WRAPPER */}
-        <div className="relative z-10 w-full h-full px-12 md:px-20">
-          {/* LOGOS — KIRI */}
-          <div className="absolute left-12 md:left-20 bottom-6">
+        <div className="relative z-10 w-full h-full px-16 md:px-20">
+          <div className="absolute left-12 md:left-65 bottom-6">
             <div className="flex gap-18 items-center">
               <img
                 src="images/logo/bank-mega.png"
@@ -95,12 +90,11 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* VIDEO — KANAN */}
-          <div className="hidden md:block absolute right-12 md:right-20 bottom-0 max-w-[440px]">
+          <div className="hidden md:block absolute right-12 md:right-65 bottom-0 max-w-[440px]">
             <img
               src="images/content/hero/video (1).png"
               alt="dummy hero"
-              className="w-full object-contain rounded-tl-[50px]"
+              className="w-full object-contain "
             />
           </div>
         </div>
