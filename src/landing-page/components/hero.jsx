@@ -1,4 +1,16 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
+
+const logos = [
+  "images/logo/bank-mega.png",
+  "images/logo/kalbe.png",
+  "images/logo/merdeka.png",
+  "images/logo/lintasarta.png",
+  "images/logo/bank-mega.png",
+  "images/logo/kalbe.png",
+  "images/logo/merdeka.png",
+  "images/logo/lintasarta.png",
+];
 
 const Hero = () => {
   return (
@@ -41,7 +53,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Gambar sekarang akan nempel di pojok kanan */}
           <div className="md:w-1/2 relative">
             <img
               src="images/content/hero/hero-img.png"
@@ -62,40 +73,39 @@ const Hero = () => {
         >
           <path
             d="
-        M 0 200
-        L 900 200
-        L 940 110
-        L 1440 110
-        L 1440 380
-        L 0 400
-        Z
-      "
+              M 0 200
+              L 900 200
+              L 940 110
+              L 1440 110
+              L 1440 380
+              L 0 400
+              Z
+            "
             fill="#ffffff"
           />
         </svg>
+        <div className="relative z-10 h-full max-w-[1400px] mx-auto px-12 md:px-16">
+          <div className="flex items-end justify-between h-full">
+            <div className="pb-6 w-[750px] overflow-hidden">
+              <Marquee speed={40} gradient={false} pauseOnHover>
+                {logos.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt="partner logo"
+                    className="h-15 opacity-80 mx-6"
+                  />
+                ))}
+              </Marquee>
+            </div>
 
-        <div className="relative z-10 w-full h-full px-16 md:px-20">
-          <div className="absolute left-12 md:left-65 bottom-6">
-            <div className="flex gap-18 items-center">
+            <div className="hidden md:block max-w-[440px]">
               <img
-                src="images/logo/bank-mega.png"
-                className="h-15 opacity-80"
-              />
-              <img src="images/logo/kalbe.png" className="h-15 opacity-80" />
-              <img src="images/logo/merdeka.png" className="h-15 opacity-80" />
-              <img
-                src="images/logo/lintasarta.png"
-                className="h-15 opacity-80"
+                src="images/content/hero/video (1).png"
+                alt="dummy hero"
+                className="w-full object-contain"
               />
             </div>
-          </div>
-
-          <div className="hidden md:block absolute right-12 md:right-65 bottom-0 max-w-[440px]">
-            <img
-              src="images/content/hero/video (1).png"
-              alt="dummy hero"
-              className="w-full object-contain "
-            />
           </div>
         </div>
       </div>
