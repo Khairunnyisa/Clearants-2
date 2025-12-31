@@ -1,21 +1,14 @@
 export default function DynamicSecurity() {
   return (
     <div className="space-y-6">
-      {/* ===================================== */}
-      {/* ROW 1 — Dua kotak ukuran sama          */}
-      {/* ===================================== */}
       <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.65fr] gap-6">
-        {/* LEFT BOX — LEBIH LEBAR */}
         <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
-          {/* HEADER IMAGE (NO PADDING) */}
-          <img
-            src="images/content/module/dynamic-title.svg"
-            alt="Dynamic Security"
-            className="absolute top-0 left-0 w-[300px] object-contain"
-          />
-
-          {/* CONTENT */}
-          <div className="relative p-8 pt-18">
+          <div className="relative p-8">
+            <img
+              src="icons/dynamsec-icon.svg"
+              alt="Security Icon"
+              className="w-13 h-13 mb-4"
+            />
             <h3 className="font-subtitle2 mb-4 text-gray-900 leading-tight">
               Advancing Dynamic Application Security Testing with Extra
               Protection
@@ -32,7 +25,6 @@ export default function DynamicSecurity() {
           </div>
         </div>
 
-        {/* RIGHT BOX — LEBIH KECIL */}
         <div className="p-6 rounded-2xl shadow-sm border border-gray-100 bg-white">
           <h3 className="font-subtitle2 mb-3 text-gray-800">
             Comprehensive API Support Platform
@@ -55,14 +47,9 @@ export default function DynamicSecurity() {
         </div>
       </div>
 
-      {/* ===================================== */}
-      {/* ROW 2 — Kolom kiri kecil, kanan lebar */}
-      {/* ===================================== */}
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
-        {/* LEFT SMALL CARD */}
         <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
           <div className="flex flex-col gap-3 h-full">
-            {/* IMAGE TOP */}
             <div className="relative flex-1 overflow-hidden">
               <img
                 src="images/content/module/web-scan.png"
@@ -71,7 +58,6 @@ export default function DynamicSecurity() {
               />
             </div>
 
-            {/* IMAGE BOTTOM */}
             <div className="relative flex-1 overflow-hidden ">
               <img
                 src="images/content/module/api-scan.png"
@@ -82,7 +68,6 @@ export default function DynamicSecurity() {
           </div>
         </div>
 
-        {/* RIGHT WIDE CARD */}
         <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
           <div className="flex gap-3 h-full">
             <img
