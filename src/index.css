@@ -5,13 +5,12 @@
   :root {
     --background: #f9fafb;
     /* PRIMARY */
-    --primary: #FF3150;
-    --secondary: #C4D0DC;
-    --light-secondary: #E8ECF2;
-    --dark-grey: #394C60;
-    --black: #090D10;
+    --primary: #ff3150;
+    --secondary: #c4d0dc;
+    --light-secondary: #e8ecf2;
+    --dark-grey: #394c60;
+    --black: #090d10;
     --white: #ffffff;
-
 
     --font-body: "Inter", sans-serif;
     --font-title: "Montserrat", sans-serif;
@@ -26,38 +25,38 @@
     overflow-x: hidden;
   }
 
-  .primary{
+  .primary {
     color: var(--primary);
   }
 
-  .secondary{
+  .secondary {
     color: var(--dark-grey);
   }
 
-  .secondary2{
+  .secondary2 {
     color: var(--light-secondary);
   }
 
-  .black{
+  .black {
     color: var(--black);
   }
-  .white{
+  .white {
     color: var(--white);
   }
 
-  .bg-secondary{
+  .bg-secondary {
     background-color: var(--secondary);
   }
 
-  .light-secondary{
+  .light-secondary {
     background-color: var(--light-secondary);
   }
 
-  .grey-outline{
+  .grey-outline {
     border: solid 2px var(--secondary);
   }
 
-  .btn-primary{
+  .btn-primary {
     font-weight: 500;
     background-color: var(--primary);
     color: white;
@@ -66,19 +65,19 @@
 
   .font-title {
     font-family: var(--font-title);
-    font-weight:600;
+    font-weight: 600;
     font-size: 45px;
   }
 
   .font-subtitle {
     font-family: var(--font-title);
-    font-weight:600;
+    font-weight: 600;
     font-size: 40px;
   }
 
   .font-subtitle2 {
     font-family: var(--font-title);
-    font-weight:600;
+    font-weight: 600;
     font-size: 20px;
   }
 

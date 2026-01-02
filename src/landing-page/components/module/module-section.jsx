@@ -6,6 +6,7 @@ import DynamicSecurity from "./components/dynamicsec";
 import MobileSecurity from "./components/mobilesec";
 import ContainerSecurity from "./components/containersec";
 import InfrastructureSecurity from "./components/infrastructuresec";
+import CustomTabCard from "../../../components/cards/cardModules";
 
 export default function ModulesSection() {
   const location = useLocation();
@@ -28,7 +29,6 @@ export default function ModulesSection() {
     }
   }, [location.hash]);
 
-  // 🔁 TAB CLICK → UPDATE HASH
   const handleTabClick = (id) => {
     setActiveTab(id);
     navigate(`#modules-${id}`, { replace: true });
@@ -52,85 +52,49 @@ export default function ModulesSection() {
   };
 
   return (
-    <section id="modules" className="relative mt-[200px] mb-20">
-  <div className="max-w-[1400px] mx-auto px-6 ">
-
-    {/* WRAPPER BACKGROUND */}
-    <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-15">
-
-      {/* SVG BACKGROUND */}
-     <svg
-  className="absolute inset-y-0 left-1/2 -translate-x-1/2 
-             w-[calc(100%+120px)] max-w-[1400px] h-full -z-10"
-  viewBox="0 0 1440 900"
-  preserveAspectRatio="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="
-      M 100 140
-      Q 100 70 170 70
-      L 300 70
-      Q 380 70 460 30
-      L 980 30
-      Q 1060 70 1140 70
-      L 1270 70
-      Q 1340 70 1340 140
-      L 1340 820
-      Q 1340 880 1280 880
-      L 160 880
-      Q 100 880 100 820
-      Z
-    "
-    fill="#EEF2F6"
-  />
-</svg>
-
-
-
-
-      {/* CONTENT */}
-      <div className="relative z-10 px-6 md:px-16 py-32">
-        {/* TITLE */}
-        <div className="text-center mb-10">
-          <h2 className="font-subtitle black">
-            Explore Our Powerful <span className="primary">Modules</span>
-          </h2>
-          <p className="font-desc mt-2">
-            Discover the core modules that power Clearants for efficiency,
-            precision, and seamless operations.
-          </p>
+    <section id="modules" className="relative mt-[100px] mb-20">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-15">
+        <div className="absolute inset-0 z-0">
+          <CustomTabCard color="#E9EEF6" className="w-full h-full" />
         </div>
 
-        {/* TABS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {[
-            { id: "application", label: "Application Security" },
-            { id: "dynamic", label: "Dynamic Security" },
-            { id: "mobile", label: "Mobile Security" },
-            { id: "container", label: "Container Security" },
-            { id: "infra", label: "Infrastructure Security" },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => handleTabClick(tab.id)}
-              className={`px-5 py-2 rounded-full font-desc border transition-all ${
-                activeTab === tab.id
-                  ? "bg-red-500 text-white shadow-sm"
-                  : "secondary hover:text-gray-700"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        <div className="relative z-10 px-6 md:px-16 py-20 lg:py-32">
+          <div className="text-center mb-10 pt-8">
+            <h2 className="font-subtitle text-black">
+              Explore Our Powerful <span className="text-red-500">Modules</span>
+            </h2>
+            <p className="font-desc mt-2">
+              Discover the core modules that power Clearants for efficiency,
+              precision, and seamless operations.
+            </p>
+          </div>
 
-        {/* TAB CONTENT */}
-        {renderContent()}
+          {/* TABS */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {[
+              { id: "application", label: "Application Security" },
+              { id: "dynamic", label: "Dynamic Security" },
+              { id: "mobile", label: "Mobile Security" },
+              { id: "container", label: "Container Security" },
+              { id: "infra", label: "Infrastructure Security" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => handleTabClick(tab.id)}
+                className={`px-5 py-2 rounded-full font-desc border transition-all ${
+                  activeTab === tab.id
+                    ? "bg-red-500 text-white shadow-sm"
+                    : "bg-white text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="pb-10">{renderContent()}</div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
   );
 }

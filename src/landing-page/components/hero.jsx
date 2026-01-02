@@ -1,11 +1,9 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import CardBackgroundPath from "../../components/cards/cardBackgroundPath";
+import CardVideoIFrame from "../../components/cards/cardVideoIFrame";
 
 const logos = [
-  "images/logo/bank-mega.png",
-  "images/logo/kalbe.png",
-  "images/logo/merdeka.png",
-  "images/logo/lintasarta.png",
   "images/logo/bank-mega.png",
   "images/logo/kalbe.png",
   "images/logo/merdeka.png",
@@ -14,12 +12,22 @@ const logos = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-[#0B111C] text-white overflow-visible">
-      <div className="absolute inset-0 from-[#0B111C] to-[#1C0F17] opacity-90"></div>
+    <section className="relative w-full min-h-screen text-white overflow-visible">
+      <div className="absolute inset-0 z-10 h-[88vh]">
+        <CardBackgroundPath
+          tabPosition="left"
+          borderRadius={0}
+          heightCorner={80}
+          tabWidth={80}
+          tabStart={"55.3vw"}
+          isFlippedVertical={true}
+          fill="#0B111C"
+        />
+      </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 py-30">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/ space-y-6 text-center md:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto h-[88vh] py-24 px-12 xl:px-0">
+        <div className="flex flex-col md:flex-row items-center justify-between  h-full ">
+          <div className=" space-y-6 text-center md:text-left">
             <h1 className="font-title max-w-[860px] leading-snug">
               Revolutionizing <span className="primary">DevSecOps </span>
               with <span className="text-[#F1FAEE]">Simplicity</span> and{" "}
@@ -64,47 +72,34 @@ const Hero = () => {
       </div>
 
       {/* BOTTOM CLIP */}
-      <div className="absolute bottom-0 left-0 w-full h-[270px] overflow-hidden">
-        <svg
-          className="absolute bottom-0 left-0 w-full h-full"
-          viewBox="0 0 1440 380"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="
-              M 0 200
-              L 900 200
-              L 940 110
-              L 1440 110
-              L 1440 380
-              L 0 400
-              Z
-            "
-            fill="#ffffff"
-          />
-        </svg>
-        <div className="relative z-10 h-full max-w-[1400px] mx-auto px-12 md:px-16">
-          <div className="flex items-end justify-between h-full">
-            <div className="pb-6 w-[750px] overflow-hidden">
-              <Marquee speed={40} gradient={false} pauseOnHover>
+      <div className="absolute bottom-0 left-0 w-full h-[calc(12vh+80px)] overflow-hidden">
+        <div className="relative h-full max-w-7xl mx-auto ">
+          <div className="flex items-end justify-between h-full gap-12">
+            <div className="overflow-hidden flex h-[12vh] justify-between w-full">
+              <Marquee
+                speed={40}
+                gradient={true}
+                pauseOnHover
+                gradientWidth={50}
+              >
                 {logos.map((src, i) => (
                   <img
                     key={i}
                     src={src}
                     alt="partner logo"
-                    className="h-15 opacity-80 mx-6"
+                    className="h-12 opacity-80 mx-6"
                   />
                 ))}
               </Marquee>
             </div>
 
-            <div className="hidden md:block max-w-[440px]">
-              <img
+            <div className="hidden md:flex h-[calc(12vh+60px)] justify-end items-start w-full">
+              <CardVideoIFrame />
+              {/* <img
                 src="images/content/hero/video (1).png"
                 alt="dummy hero"
-                className="w-full object-contain"
-              />
+                className="w-[calc(580px-5.3vw)] h-[calc(12vh+40px)]" 
+              /> */}
             </div>
           </div>
         </div>

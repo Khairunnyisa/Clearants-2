@@ -86,6 +86,8 @@ const CardLeft = ({ title, desc, icon }) => (
       <CardBackgroundPath
         tabPosition="left"
         borderRadius={20}
+        tabWidth={50}
+        tabStart={140}
         fill="#e2e8f0"
         width="100%"
         height="100%"
@@ -112,6 +114,8 @@ const CardRight = ({ title, desc, icon }) => (
       <CardBackgroundPath
         tabPosition="right"
         borderRadius={20}
+        tabWidth={50}
+        tabStart={140}
         fill="#e2e8f0"
         width="100%"
         height="100%"
@@ -122,7 +126,7 @@ const CardRight = ({ title, desc, icon }) => (
         {icon}
       </div>
 
-      <h3 className="text-[#1a2b3b] font-bold text-xl leading-tight">
+      <h3 className="text-[#1a2b3b] font-bold text-xl leading-tight text-right">
         {title}
       </h3>
 

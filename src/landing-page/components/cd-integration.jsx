@@ -31,7 +31,7 @@ export default function CdIntegration() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-20">
-          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden groupaspect-4/3">
             <img
               src="images/content/integration/ci-img1.png"
               alt="Notification Integration"
@@ -49,7 +49,7 @@ export default function CdIntegration() {
             </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden group aspect-4/3">
             <img
               src="images/content/integration/ci-img2.png"
               alt="Notification Integration"
@@ -67,7 +67,7 @@ export default function CdIntegration() {
             </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden group aspect-4/3">
             <img
               src="images/content/integration/ci-img3.png"
               alt="Notification Integration"
