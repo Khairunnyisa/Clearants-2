@@ -5,7 +5,7 @@ const Timeline = () => {
     <>
       <section className="relative w-full bg-white pt-56 pb-40">
         {/* WRAPPER UNTUK NAIKKAN SEMUA KONTEN */}
-        <div className="-mt-40 relative">
+        <div className="-mt-60 relative">
           {/* TITLE SECTION */}
           <div className="w-full flex flex-col items-center text-center mb-20">
             <h2 className="font-title md:text-4xl font-bold text-black">

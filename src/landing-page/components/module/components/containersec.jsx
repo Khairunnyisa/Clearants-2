@@ -1,48 +1,64 @@
 export default function ContainerSecurity() {
   return (
-    <div className="grid md:grid-cols-2 gap-6 items-stretch">
-      {/* Kolom kiri */}
-      <div className="p-6 rounded-2xl shadow-sm border border-gray-100 bg-white flex flex-col justify-between">
-        <img
-          src="icons/appsec-icon.svg"
-          alt="Security Icon"
-          className="w-13 h-13 mb-4"
-        />
-        <div>
-          <h3 className="font-semibold text-lg mb-2 text-gray-800">
-            Invincible Application Security
-          </h3>
-          <p className="text-gray-500 leading-relaxed mb-4">
-            Protect your source code with multi-layered defense against
-            vulnerabilities and cyber threats throughout the entire development
-            lifecycle.
-          </p>
+    <div className="grid md:grid-cols-[2fr_1fr] gap-6 items-stretch">
+      {/* ================= LEFT COLUMN ================= */}
+      <div className="grid grid-rows-[2fr_2fr] gap-6 h-full">
+        {/* LEFT TOP */}
+        <div className="min-h-[220px] p-5 rounded-2xl shadow-sm border border-gray-100 bg-white flex flex-col justify-between">
+         <img
+              src="icons/consec-icon.svg"
+              alt="Security Icon"
+              className="w-13 h-13 mb-4"
+            />
+          <div>
+            <h3 className="font-semibold text-lg mb-2 text-gray-800">
+            Level Up Your Container Security with Top-Tier Protection
+            </h3>
+            <p className="text-gray-500 leading-relaxed mb-3">
+              We protect application containers prior to deployment and installation to ensure they are protected from cyber attacks and conform to security standards and privacy regulations. This module is still in development and will be coming soon.
+            </p>
+          </div>
+
+          
         </div>
 
-        {/* Gambar di bawah */}
-        <img
-          src="images/appsec-img.png"
-          alt="Application Security Illustration"
-          className="w-full rounded-xl object-cover mt-4"
-        />
+        {/* LEFT BOTTOM */}
+        <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
+          <img
+            src="images/container-img.png"
+            alt=""
+            className="
+      absolute
+      left-1/2
+      -translate-x-1/2
+      bottom-[-5px]
+      w-[250px]
+      md:w-[550px]
+      pointer-events-none
+      select-none
+    "
+          />
+        </div>
       </div>
 
-      {/* Kolom kanan */}
+      {/* ================= RIGHT COLUMN ================= */}
       <div className="grid grid-rows-[2fr_1fr] gap-6 h-full">
-        <div className="rounded-2xl shadow-sm border border-gray-100 bg-white overflow-hidden flex items-center justify-center">
+        {/* RIGHT TOP */}
+        <div className="min-h-[200px] rounded-2xl shadow-sm border border-gray-100 bg-white flex items-center justify-center">
           <img
             src="images/appsec-img2.png"
             alt="Code Protection"
-            className="w-3/4 max-h-[250px] object-contain"
+            className="w-[90%]  object-contain"
           />
         </div>
 
-        <div className="p-6 rounded-2xl shadow-sm border border-gray-100 bg-white flex flex-col justify-center">
+        {/* RIGHT BOTTOM */}
+        <div className="min-h-[150px] text-center p-5 rounded-2xl shadow-sm border border-gray-100 bg-white flex flex-col justify-center">
           <h4 className="font-semibold text-gray-800 mb-2">
-            Vulnerability Scan
+            Record your code changes
           </h4>
           <p className="text-gray-500 text-sm">
-            Automatically detect and fix potential weaknesses in your codebase.
+            This process involves documenting modifications made to the source code, enabling developers to track and manage the evolution of a project over time. 
           </p>
         </div>
       </div>

@@ -3,11 +3,11 @@ export default function ApplicationSecurity() {
     <div className="grid md:grid-cols-2 gap-6 items-stretch">
       {/* Kolom kiri */}
       <div className="p-6 rounded-2xl shadow-sm border border-gray-100 bg-white flex flex-col justify-between">
-        <img
-          src="icons/appsec-icon.svg"
-          alt="Security Icon"
-          className="w-13 h-13 mb-4"
-        />
+       <img
+              src="icons/appsec-icon.svg"
+              alt="Security Icon"
+              className="w-13 h-13 mb-4"
+            />
         <div>
           <h3 className="font-semibold text-lg mb-2 text-gray-800">
             Invincible Application Security
