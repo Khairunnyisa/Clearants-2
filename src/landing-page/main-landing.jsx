@@ -1,9 +1,7 @@
-import Navbar from "../navbar";
 import AsocSection from "./components/asoc";
 import CdIntegration from "./components/cd-integration";
 import ContactSection from "./components/contact";
 import FAQSection from "./components/faq";
-import Footer from "./components/footer";
 import Hero from "./components/hero";
 import ModulesSection from "./components/module/module-section";
 import Reports from "./components/reports";
@@ -13,7 +11,6 @@ import WhyChoose from "./components/why-choose";
 export function MainLanding() {
   return (
     <>
-      <Navbar />
       <Hero />
       <ModulesSection />
       <CdIntegration />
@@ -23,7 +20,6 @@ export function MainLanding() {
       <AsocSection />
       <FAQSection />
       <ContactSection />
-      <Footer />
     </>
   );
 }

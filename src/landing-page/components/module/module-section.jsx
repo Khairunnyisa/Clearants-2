@@ -6,7 +6,7 @@ import DynamicSecurity from "./components/dynamicsec";
 import MobileSecurity from "./components/mobilesec";
 import ContainerSecurity from "./components/containersec";
 import InfrastructureSecurity from "./components/infrastructuresec";
-import CustomTabCard from "../../../components/cards/cardModules";
+import CardModules from "../../../components/cards/cardModules";
 
 export default function ModulesSection() {
   const location = useLocation();
@@ -55,7 +55,7 @@ export default function ModulesSection() {
     <section id="modules" className="relative mt-[100px] mb-20">
       <div className="relative max-w-7xl mx-auto px-6 md:px-15">
         <div className="absolute inset-0 z-0">
-          <CustomTabCard color="#E9EEF6" className="w-full h-full" />
+          <CardModules color="#E9EEF6" className="w-full h-full" />
         </div>
 
         <div className="relative z-10 px-6 md:px-16 py-20 lg:py-32">

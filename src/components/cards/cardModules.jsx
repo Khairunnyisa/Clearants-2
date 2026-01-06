@@ -1,6 +1,6 @@
 import React from "react";
 
-const CustomTabCard = ({
+const CardModules = ({
   color = "#E9EEF6",
   radius = 10, // Radius sudut kotak luar
   tabHeight = 20, // Tinggi tonjolan tab
@@ -53,4 +53,4 @@ const CustomTabCard = ({
   );
 };
 
-export default CustomTabCard;
+export default CardModules;

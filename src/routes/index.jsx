@@ -4,28 +4,39 @@ import { MainArticle } from "../article-page/main-article";
 import { DetailArticle } from "../detail-article/main-detailarticle";
 import { Asoc } from "../asoc-pages/main-asoc";
 import { Faq } from "../faq-page/main-faq";
+import MainLayout from "../MainLayout";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <MainLanding />,
-  },
-  {
-    path: "/article",
-    element: <MainArticle />,
-  },
-  {
-    path: "/detail-article",
-    element: <DetailArticle />,
-  },
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <MainLanding />,
+      },
+      {
+        path: "/article",
+        children: [
+          {
+            path: "",
+            element: <MainArticle />,
+          },
+          {
+            path: ":articleId",
+            element: <DetailArticle />,
+          },
+        ],
+      },
 
-  {
-    path: "/asoc",
-    element: <Asoc />,
-  },
+      {
+        path: "/asoc",
+        element: <Asoc />,
+      },
 
-  {
-    path: "/faq",
-    element: <Faq />,
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+    ],
   },
 ]);
