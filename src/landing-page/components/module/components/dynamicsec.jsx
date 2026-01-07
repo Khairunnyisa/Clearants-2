@@ -3,7 +3,7 @@ export default function DynamicSecurity() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.65fr] gap-6">
         <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
-          <div className="relative p-8">
+          <div className="relative p-5">
             <img
               src="icons/dynamsec-icon.svg"
               alt="Security Icon"
@@ -14,7 +14,7 @@ export default function DynamicSecurity() {
               Protection
             </h3>
 
-            <p className="font-desc max-w-3xl">
+            <p className="text-sm text-gray-400 max-w-3xl">
               DAST (Dynamic Application Security Tools) helps your developers
               and QA teams test their web applications and APIs for potential
               security threats, so you can identify vulnerabilities that could
@@ -29,7 +29,7 @@ export default function DynamicSecurity() {
           <h3 className="font-subtitle2 mb-3 text-gray-800">
             Comprehensive API Support Platform
           </h3>
-          <p className="text-gray-500 font-desc mb-4">
+          <p className="text-sm text-gray-400  mb-4">
             Our platform offers unparalleled support for API types...
           </p>
 

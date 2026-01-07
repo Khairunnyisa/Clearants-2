@@ -1,106 +1,65 @@
 export default function InfrastructureSecurity() {
   return (
     <div className="space-y-6">
-      {/* ===================================== */}
-      {/* ROW 1 — Dua kotak ukuran sama          */}
-      {/* ===================================== */}
       <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.65fr] gap-6">
-        {/* LEFT BOX — LEBIH LEBAR */}
         <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
-          {/* HEADER IMAGE (NO PADDING) */}
-          <img
-            src="images/content/module/dynamic-title.svg"
-            alt="Dynamic Security"
-            className="absolute top-0 left-0 w-[300px] object-contain"
-          />
-
-          {/* CONTENT */}
-          <div className="relative p-8 pt-18">
+          <div className="relative p-5">
+            <img
+              src="icons/infra-icon.svg"
+              alt="Security Icon"
+              className="w-13 h-13 mb-4"
+            />
             <h3 className="font-subtitle2 mb-4 text-gray-900 leading-tight">
-              Advancing Dynamic Application Security Testing with Extra
-              Protection
+              Maximizing Time Efficiency with Infrastructure as Code Tools
             </h3>
 
-            <p className="font-desc max-w-3xl">
-              DAST (Dynamic Application Security Tools) helps your developers
-              and QA teams test their web applications and APIs for potential
-              security threats, so you can identify vulnerabilities that could
-              compromise the integrity of data or the privacy of users. This
-              helps ensure that your application meets security standards
-              securely and properly.
+            <p className="text-sm text-gray-400 max-w-3xl">
+              Protecting your infrastructure is critical which is why we offer
+              Infrastructure as Code tools to automate hardening processes and
+              defend against potential threats. From networks and systems to
+              data, applications, and devices, our security coverage is
+              comprehensive. This module is currently in beta and will be
+              available soon.
             </p>
           </div>
         </div>
 
-        {/* RIGHT BOX — LEBIH KECIL */}
-        <div className="p-6 rounded-2xl shadow-sm border border-gray-100 bg-white">
-          <h3 className="font-subtitle2 mb-3 text-gray-800">
-            Comprehensive API Support Platform
-          </h3>
-          <p className="text-gray-500 font-desc mb-4">
-            Our platform offers unparalleled support for API types...
-          </p>
-
-          <div className="flex gap-3 flex-wrap">
-            <span className="px-4 py-1 bg-green-50 text-green-600 rounded-full text-sm">
-              SOAP API
-            </span>
-            <span className="px-4 py-1 bg-green-50 text-green-600 rounded-full text-sm">
-              GraphQL
-            </span>
-            <span className="px-4 py-1 bg-green-50 text-green-600 rounded-full text-sm">
-              REST/Open API
-            </span>
-          </div>
+        <div className="relative p-5 rounded-2xl shadow-sm border border-gray-100 bg-white ">
+          <img
+    src="images/content/module/infra-img.png"
+    alt=""
+    className="w-[250px] rounded-[5px] md:w-[550px] select-none pointer-events-none"
+  />
         </div>
       </div>
 
-      {/* ===================================== */}
-      {/* ROW 2 — Kolom kiri kecil, kanan lebar */}
-      {/* ===================================== */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
-        {/* LEFT SMALL CARD */}
-        <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
-          <div className="flex flex-col gap-3 h-full">
-            {/* IMAGE TOP */}
-            <div className="relative flex-1 overflow-hidden">
-              <img
-                src="images/content/module/web-scan.png"
-                alt="Website Scan"
-                className="inset-0 w-full h-full "
-              />
+      <div className="grid grid-cols-1 md:grid-cols-[2fr] gap-6">
+        <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-8 md:p-5">
+          {/* -------- */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+            {/* Kotak 1 */}
+            <div className="bg-gray-100 rounded-2xl p-4">
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Playbook Management</h3>
+              <p className="text-sm text-gray-500">Create and manage playbooks to automate incident response and hardening tasks, ensuring consistency across environments.</p>
             </div>
 
-            {/* IMAGE BOTTOM */}
-            <div className="relative flex-1 overflow-hidden ">
-              <img
-                src="images/content/module/api-scan.png"
-                alt="API Scan"
-                className=" inset-0 w-full h-full "
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT WIDE CARD */}
-        <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
-          <div className="flex gap-3 h-full">
-            {/* IMAGE LEFT */}
-            <div className="relative flex-1 rounded-xl overflow-hidden bg-gray-100">
-              <img
-                src="images/content/module/api-card.png"
-                alt="API Dashboard"
-                className="absolute inset-0 w-full h-full  object-top"
-              />
+            {/* Kotak 2 */}
+            <div className="bg-gray-100 rounded-2xl p-4">
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Credentials Management</h3>
+              <p className="text-sm text-gray-500">Securely store, access, and rotate credentials using encrypted vaults and role-based access control. Prevent unauthorized access and reduce the risk of credential leaks.</p>
             </div>
 
-            {/* IMAGE RIGHT */}
-            <div className="relative flex-1 rounded-xl overflow-hidden bg-gray-100">
-              <img
-                src="images/content/module/web-card.png"
-                alt="API Dashboard Detail"
-                className="absolute inset-0 w-full h-full  object-top"
-              />
+            {/* Kotak 3 */}
+            <div className="bg-gray-100 rounded-2xl p-4">
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Pre-Harden</h3>
+              <p className="text-sm text-gray-500">Assess your infrastructure for security gaps and misconfigurations before deployment. Gain actionable insights to prepare systems for a hardened state.</p>
+            </div>
+
+            {/* Kotak 4 */}
+            <div className="bg-gray-100 rounded-2xl p-4">
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Harden</h3>
+              <p className="text-sm text-gray-500">Automatically apply security best practices and configurations to protect your infrastructure. Ensure compliance and resilience with minimal manual effort.</p>
             </div>
           </div>
         </div>

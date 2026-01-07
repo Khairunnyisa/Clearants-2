@@ -12,7 +12,7 @@ export default function ApplicationSecurity() {
           <h3 className="font-semibold text-lg mb-2 text-gray-800">
             Invincible Application Security
           </h3>
-          <p className="text-gray-500 leading-relaxed mb-4">
+          <p className="text-sm text-gray-400 leading-relaxed mb-4">
             Protect your source code with multi-layered defense against
             vulnerabilities and cyber threats throughout the entire development
             lifecycle.

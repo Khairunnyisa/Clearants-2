@@ -11,13 +11,13 @@ export default function MobileSecurity() {
         bottom-[-80px]
         right-[-100px]
         w-[280px]
-        md:w-[550px]
+        md:w-[500px]
         pointer-events-none
         select-none
       "
           />
 
-          <div className="relative p-8">
+          <div className="relative p-5">
             <img
               src="icons/mobsec-icon.svg"
               alt="Security Icon"
@@ -28,7 +28,7 @@ export default function MobileSecurity() {
               The Ultimate App Security, Right in Your Hands
             </h3>
 
-            <p className="font-desc max-w-[500px]">
+            <p className="text-sm text-gray-400 max-w-[500px]">
               Our Mobile Security solution helps keep your mobile applications
               secure by scanning them for vulnerabilities. It analyzes the
               source code, architecture, and configuration of your mobile app to
