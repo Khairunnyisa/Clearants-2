@@ -7,7 +7,7 @@ const useCreateLiveDemo = () => {
   const { isLoading, isSuccess, mutate } = useMutation({
     mutationFn: async (data) => {
       try {
-        const res = await apiUrl.post(`/api/request-live-demos`, {
+        const res = await apiUrl.post(`/api/live-demo`, {
           data: data,
         });
 

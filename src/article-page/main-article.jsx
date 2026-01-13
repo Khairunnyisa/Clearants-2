@@ -7,7 +7,7 @@ export function MainArticle() {
     <div className="min-h-screen w-full light-secondary">
       <ArticleHero />
 
-      <div className="px-15  flex gap-8">
+      <div className="px-15 pb-10 flex gap-8">
         <LeftFilter />
         <ArticleList />
       </div>

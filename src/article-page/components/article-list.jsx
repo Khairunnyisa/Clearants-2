@@ -1,21 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import useGetArticles from "../../hooks/queries/article/getArticles";
-import moment from "moment/moment";
+import moment from "moment";
+import { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
-export default function ArticleList() {
+export default function ArticleList({ searchValue }) {
   const navigate = useNavigate();
+  const [page, setPage] = useState(1);
 
-  const { data } = useGetArticles({
+  const { data, isLoading } = useGetArticles({
     condition: true,
-    limit: 9,
-    page: 1,
-    searchValue: "",
+    limit: 4,
+    page,
+    searchValue: searchValue,
   });
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  const articles = data?.data || [];
 
   return (
     <div className="flex-1">
       <div className="space-y-5">
-        {data?.data?.map((item) => (
+        {articles.map((item) => (
           <div
             key={item.id}
             className="bg-white grey-outline rounded-xl overflow-hidden flex h-[180px] cursor-pointer"
@@ -45,7 +54,7 @@ export default function ArticleList() {
               <span
                 className="mt-2 primary font-desc cursor-pointer"
                 onClick={(e) => {
-                  e.stopPropagation(); // biar tidak trigger klik card
+                  e.stopPropagation();
                   navigate(`/article/${item.id}`);
                 }}
               >
@@ -56,9 +65,29 @@ export default function ArticleList() {
         ))}
       </div>
 
+      {/* PAGINATION */}
       <div className="mt-6 text-sm text-gray-600 flex items-center justify-between">
-        <p>Showing 1 to 8 of 8 entries</p>
-        <p>Row per page: 10 • 1–10 of 20</p>
+        <p>
+          Page {page} of {data?.meta?.pagination?.pageCount}
+        </p>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setPage(page - 1)}
+            disabled={page === 1}
+            className="w-8 h-8 flex items-center justify-center rounded disabled:opacity-40"
+          >
+            <ChevronLeftIcon className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={() => setPage(page + 1)}
+            disabled={page >= data?.meta?.pagination?.pageCount}
+            className="w-8 h-8 flex items-center justify-center rounded disabled:opacity-40"
+          >
+            <ChevronRightIcon className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </div>
   );

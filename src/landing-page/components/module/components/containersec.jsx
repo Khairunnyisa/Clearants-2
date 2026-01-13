@@ -6,23 +6,23 @@ export default function ContainerSecurity() {
         {/* LEFT TOP */}
         <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
           <div className="relative p-5">
-             <img
+            <img
               src="icons/consec-icon.svg"
               alt="Security Icon"
               className="w-13 h-13 mb-4"
             />
-          <div>
-            <h3 className="font-semibold text-lg mb-2 text-gray-800">
-            Level Up Your Container Security with Top-Tier Protection
-            </h3>
-            <p className="text-gray-500 text-sm leading-relaxed mb-3">
-              We protect application containers prior to deployment and installation to ensure they are protected from cyber attacks and conform to security standards and privacy regulations. This module is still in development and will be coming soon.
-            </p>
+            <div>
+              <h3 className="font-semibold text-lg mb-2 text-gray-800">
+                Level Up Your Container Security with Top-Tier Protection
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                We protect application containers prior to deployment and
+                installation to ensure they are protected from cyber attacks and
+                conform to security standards and privacy regulations. This
+                module is still in development and will be coming soon.
+              </p>
+            </div>
           </div>
-
-          </div>
-        
-          
         </div>
 
         {/* LEFT BOTTOM */}
@@ -61,7 +61,9 @@ export default function ContainerSecurity() {
             Record your code changes
           </h4>
           <p className="text-gray-500 text-sm">
-            This process involves documenting modifications made to the source code, enabling developers to track and manage the evolution of a project over time. 
+            This process involves documenting modifications made to the source
+            code, enabling developers to track and manage the evolution of a
+            project over time.
           </p>
         </div>
       </div>

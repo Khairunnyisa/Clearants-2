@@ -26,10 +26,10 @@ export default function InfrastructureSecurity() {
 
         <div className="relative p-5 rounded-2xl shadow-sm border border-gray-100 bg-white ">
           <img
-    src="images/content/module/infra-img.png"
-    alt=""
-    className="w-[250px] rounded-[5px] md:w-[550px] select-none pointer-events-none"
-  />
+            src="images/content/module/infra-img.png"
+            alt=""
+            className="w-[250px] rounded-[5px] md:w-[550px] select-none pointer-events-none"
+          />
         </div>
       </div>
 
@@ -40,26 +40,49 @@ export default function InfrastructureSecurity() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
             {/* Kotak 1 */}
             <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Playbook Management</h3>
-              <p className="text-sm text-gray-500">Create and manage playbooks to automate incident response and hardening tasks, ensuring consistency across environments.</p>
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+                Playbook Management
+              </h3>
+              <p className="text-sm text-gray-500">
+                Create and manage playbooks to automate incident response and
+                hardening tasks, ensuring consistency across environments.
+              </p>
             </div>
 
             {/* Kotak 2 */}
             <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Credentials Management</h3>
-              <p className="text-sm text-gray-500">Securely store, access, and rotate credentials using encrypted vaults and role-based access control. Prevent unauthorized access and reduce the risk of credential leaks.</p>
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+                Credentials Management
+              </h3>
+              <p className="text-sm text-gray-500">
+                Securely store, access, and rotate credentials using encrypted
+                vaults and role-based access control. Prevent unauthorized
+                access and reduce the risk of credential leaks.
+              </p>
             </div>
 
             {/* Kotak 3 */}
             <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Pre-Harden</h3>
-              <p className="text-sm text-gray-500">Assess your infrastructure for security gaps and misconfigurations before deployment. Gain actionable insights to prepare systems for a hardened state.</p>
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+                Pre-Harden
+              </h3>
+              <p className="text-sm text-gray-500">
+                Assess your infrastructure for security gaps and
+                misconfigurations before deployment. Gain actionable insights to
+                prepare systems for a hardened state.
+              </p>
             </div>
 
             {/* Kotak 4 */}
             <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">Harden</h3>
-              <p className="text-sm text-gray-500">Automatically apply security best practices and configurations to protect your infrastructure. Ensure compliance and resilience with minimal manual effort.</p>
+              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+                Harden
+              </h3>
+              <p className="text-sm text-gray-500">
+                Automatically apply security best practices and configurations
+                to protect your infrastructure. Ensure compliance and resilience
+                with minimal manual effort.
+              </p>
             </div>
           </div>
         </div>

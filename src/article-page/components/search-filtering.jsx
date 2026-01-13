@@ -14,8 +14,7 @@ function ListFilter({ title, items }) {
   return (
     <SectionCard>
       <h3 className="font-subtitle2 secondary mb-3">{title}</h3>
-
-      <hr className="mb-5 secondary"/>
+      <hr className="mb-5 secondary" />
 
       <div className="space-y-3 font-desc secondary">
         {items.map((item) => (
@@ -23,13 +22,11 @@ function ListFilter({ title, items }) {
             key={item.name}
             className="flex items-center justify-between"
           >
-            {/* Text + count */}
             <label className="flex items-center gap-2 cursor-pointer select-none">
               <span>{item.name}</span>
               <span className="secondary">({item.count})</span>
             </label>
 
-            {/* Checkbox on right */}
             <input
               type="checkbox"
               className="w-4 h-4 accent-blue-600 cursor-pointer"
@@ -41,7 +38,7 @@ function ListFilter({ title, items }) {
   );
 }
 
-export default function Filtering() {
+export default function Filtering({ searchValue, setSearchValue }) {
   const kategori = [
     { name: "Security", count: 0 },
     { name: "Software", count: 2 },
@@ -60,22 +57,21 @@ export default function Filtering() {
 
   return (
     <aside className="w-full md:w-[500px] flex-shrink-0 space-y-6">
-      
-      {/* Search */}
-    
-        <div className="flex items-center gap-2 bg-white grey-outline px-3 py-5 rounded-lg">
-          <Search size={18} className="secondary" />
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-transparent outline-none w-full text-sm"
-          />
-        </div>
-     
+      {/* SEARCH */}
+      <div className="flex items-center gap-2 bg-white grey-outline px-3 py-5 rounded-lg">
+        <Search size={18} className="secondary" />
+        <input
+  type="text"
+  value={searchValue}
+  onChange={(e) => setSearchValue(e.target.value)}
+  placeholder="Search article title..."
+  className="bg-transparent outline-none w-full text-sm"
+/>
+      </div>
 
+      {/* FILTERS */}
       <ListFilter title="Kategori" items={kategori} />
       <ListFilter title="Produk" items={produk} />
-
     </aside>
   );
 }

@@ -60,7 +60,11 @@ export default function ModulesSection() {
 
         <div className="relative z-10 px-6 md:px-16 py-20 lg:py-32">
           <div className="text-center mb-10 pt-8">
-            <h2 className="font-subtitle text-black">
+            <h2
+              className="font-subtitle text-[28px]
+    sm:text-[32px]
+    md:text-[45px] text-black"
+            >
               Explore Our Powerful <span className="text-red-500">Modules</span>
             </h2>
             <p className="font-desc mt-2">
@@ -70,7 +74,15 @@ export default function ModulesSection() {
           </div>
 
           {/* TABS */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <div
+            className="flex
+    gap-3
+    mb-10
+    overflow-x-auto
+    scrollbar-hide
+    md:flex-wrap
+    md:justify-center"
+          >
             {[
               { id: "application", label: "Application Security" },
               { id: "dynamic", label: "Dynamic Security" },

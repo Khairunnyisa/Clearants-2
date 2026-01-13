@@ -54,7 +54,11 @@ const WhyChoose = () => {
             style={{ backgroundImage: "url('images/why-img.png')" }}
           >
             <div>
-              <h1 className="font-title mb-5 leading-tight">
+              <h1
+                className="font-title text-[28px]
+    sm:text-[32px]
+    md:text-[45px] mb-5 leading-tight"
+              >
                 Why Choose i3GIS?
               </h1>
               <p className="font-desc text-lg leading-relaxed max-w-md">

@@ -1,6 +1,6 @@
 export default function ArticleHero() {
   return (
-    <section className="w-full py-20 px-6 md:px-12">
+    <section className="w-full pt-30 pb-20 px-6 md:px-12">
       
       <div className="font-desc mx-auto text-gray-700 mt-6 flex items-center gap-2 text-lg md:text-xl">
         <p className="opacity-60">Home</p>

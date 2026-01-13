@@ -19,11 +19,11 @@ const useGetArticles = ({
         return res.data;
       } catch (err) {
         handlingError(err);
-        throw err; // IMPORTANT: must throw for React Query to handle error state
+        throw err; 
       }
     },
     enabled: condition,
-    gcTime: 0, // replacement for cacheTime
+    gcTime: 0, 
   });
 
   return { data, isLoading, error, refetch };

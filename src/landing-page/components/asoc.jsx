@@ -23,8 +23,8 @@ export default function AsocSection() {
             <div
               className="
               inline-block bg-white text-[#E94E59] 
-              font-semibold text-2xl md:text-3xl 
-              px-10 py-5 rounded-full 
+              font-semibold font-subtitle2 
+              px-25 py-5 rounded-full 
               shadow-lg my-10
             "
             >

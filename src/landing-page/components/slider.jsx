@@ -1,32 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import useGetArticles from "../../hooks/queries/article/getArticles";
+import moment from "moment";
 
 const SliderSection = () => {
   const sliderRef = useRef(null);
 
-  const ideas = [
-    {
-      id: 1,
-      title: "Lorem ipsum he le consectetur elit sit amet.",
-      date: "APSEC - NOV 12, 2023",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat, lectus amet commodo dolor venenatis venenatis, natoque....",
-      image: "images/slider-1.png",
-    },
-    {
-      id: 2,
-      title: "Lorem ipsum he le consectetur elit sit amet.",
-      date: "APSEC - NOV 12, 2023",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat, lectus amet commodo dolor venenatis venenatis, natoque....",
-      image: "images/slider-2.png",
-    },
-    {
-      id: 3,
-      title: "Lorem ipsum he le consectetur elit sit amet.",
-      date: "APSEC - NOV 12, 2023",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat, lectus amet commodo dolor venenatis venenatis, natoque....",
-      image: "images/slider-3.png",
-    },
-  ];
+  const { data } = useGetArticles({
+    condition: true,
+    limit: 10,
+    page: 1,
+    searchValue: "",
+  });
 
   const slideLeft = () => {
     sliderRef.current.scrollBy({ left: -400, behavior: "smooth" });
@@ -39,7 +24,11 @@ const SliderSection = () => {
   return (
     <section className="w-full py-20">
       <div className="max-w-[1400px] mx-auto px-6 md:px-16">
-        <h2 className="text-center font-subtitle mb-12">
+        <h2
+          className="text-center text-[28px]
+    sm:text-[32px]
+    md:text-[45px] font-subtitle mb-12"
+        >
           Explore <span className="primary">Idea & Insights</span>
         </h2>
 
@@ -57,23 +46,29 @@ const SliderSection = () => {
             ref={sliderRef}
             className="flex gap-10 overflow-x-scroll scrollbar-hide scroll-smooth"
           >
-            {ideas.map((item) => (
+            {data?.data?.map((item) => (
               <div
                 key={item.id}
                 className="min-w-[350px] max-w-[350px] 
-                bg-[#E9EFF5] rounded-xl p-5 shadow-sm"
+      bg-[#E9EFF5] rounded-xl p-5 shadow-sm"
               >
                 <img
-                  src={item.image}
+                  src={`https://cms.i3gis.id/${item.attributes.image.data[0].attributes.url}`}
                   className="w-full h-[200px] object-cover rounded-lg"
-                  alt={item.title}
+                  alt={item.attributes.title}
                 />
 
-                <p className="font-desc text-gray-700 mt-4">{item.date}</p>
+                <p className="font-desc text-gray-700 mt-4">
+                  {moment(item.attributes.publishedAt).format("MMM DD, YYYY")}
+                </p>
 
-                <h3 className="font-subtitle2 text-lg mt-2">{item.title}</h3>
+                <h3 className="font-subtitle2 text-lg mt-2 line-clamp-2">
+                  {item.attributes.title}
+                </h3>
 
-                <p className="font-desc secondary mt-3">{item.desc}</p>
+                <p className="font-desc secondary mt-3 line-clamp-3">
+                  {item.attributes.description}
+                </p>
               </div>
             ))}
           </div>

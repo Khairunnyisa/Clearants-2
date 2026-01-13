@@ -9,7 +9,13 @@ const Reports = () => {
           backgroundImage: "url('/images/reports-bg.svg')",
         }}
       >
-        <h2 className="text-center font-title mb-10">Reports Overview</h2>
+        <h2
+          className="text-center text-[28px]
+    sm:text-[32px]
+    md:text-[45px] font-title mb-10"
+        >
+          Reports Overview
+        </h2>
 
         <div className="flex flex-col md:flex-row gap-12 items-stretch">
           <div className="flex-1 relative w-full">

@@ -8,27 +8,18 @@ const useGetFAQs = ({
   page = 1,
   searchValue = "",
 }) => {
-  const { data, isLoading, error, refetch } = useQuery(
-    ["faqs", page, limit, searchValue],
-    async () => {
-      try {
-        const res = await apiUrl.get(
-          `/api/faqs?populate=*&pagination[page]=${page}&pagination[pageSize]=${limit}&filters[question][$contains]=${searchValue}`
-        );
-
-        return res.data;
-      } catch (error) {
-        handlingError(error);
-        return error;
-      }
+  return useQuery({
+    queryKey: ["faqs", page, limit, searchValue],
+    enabled: condition,
+    gcTime: 0, // pengganti cacheTime
+    queryFn: async () => {
+      const res = await apiUrl.get(
+        `/api/faqs?populate=*&pagination[page]=${page}&pagination[pageSize]=${limit}&filters[question][$contains]=${searchValue}`
+      );
+      return res.data;
     },
-    {
-      cacheTime: 0,
-      enabled: condition,
-    }
-  );
-
-  return { data, isLoading, error, refetch };
+    onError: handlingError,
+  });
 };
 
 export default useGetFAQs;

@@ -13,7 +13,13 @@ export default function CdIntegration() {
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="lg:w-1/2 space-y-6">
-            <h2 className="font-subtitle">CI/CD Integration</h2>
+            <h2
+              className="font-subtitle text-[28px]
+    sm:text-[32px]
+    md:text-[45px]"
+            >
+              CI/CD Integration
+            </h2>
             <p className="font-body secondary">
               Integrating i3gis with CI/CD tools can greatly enhance your
               software development and deployment processes. By incorporating

@@ -28,34 +28,65 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto h-[88vh] py-24 px-12 xl:px-0">
         <div className="flex flex-col md:flex-row items-center justify-between  h-full ">
           <div className=" space-y-6 text-center md:text-left">
-            <h1 className="font-title max-w-[860px] leading-snug">
+            <h1
+              className="font-title
+    max-w-[860px]
+    leading-snug
+    text-[28px]
+    sm:text-[32px]
+    md:text-[45px]"
+            >
               Revolutionizing <span className="primary">DevSecOps </span>
               with <span className="text-[#F1FAEE]">Simplicity</span> and{" "}
               <span className="text-[#F1FAEE]">Agility</span>
             </h1>
 
-            <p className="font-desc max-w-xl">
+            <p className="text-sm  max-w-xl">
               Clearants is a comprehensive platform that combines security
               testing and DevSecOps tools into one dashboard. Its modular
               features help companies across various industries safeguard their
               business from the development stage.
             </p>
 
-            <button className="btn-primary py-3 px-7 rounded-lg">
-              Live Demo
-            </button>
+            <button
+  onClick={() => {
+    const section = document.getElementById("contact");
+    section?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="btn-primary py-3 px-7 rounded-lg"
+>
+  Live Demo
+</button>
 
             <div className="flex justify-center md:justify-start items-center gap-8 pt-6">
               <div>
-                <p className="font-subtitle">100+</p>
+                <p
+                  className="font-subtitle text-[28px]
+    sm:text-[32px]
+    md:text-[45px]"
+                >
+                  100+
+                </p>
                 <p className="font-desc primary mt-1">Users</p>
               </div>
               <div>
-                <p className="font-subtitle">4y</p>
+                <p
+                  className="font-subtitle text-[28px]
+    sm:text-[32px]
+    md:text-[45px]"
+                >
+                  4y
+                </p>
                 <p className="font-desc primary mt-1">Experience</p>
               </div>
               <div>
-                <p className="font-subtitle">1000+</p>
+                <p
+                  className="font-subtitle text-[28px]
+    sm:text-[32px]
+    md:text-[45px]"
+                >
+                  1000+
+                </p>
                 <p className="font-desc primary mt-1">Projects</p>
               </div>
             </div>
@@ -105,6 +136,10 @@ const Hero = () => {
         </div>
       </div>
     </section>
+
+   
+
+    
   );
 };
 
