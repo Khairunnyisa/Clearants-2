@@ -65,7 +65,7 @@ const ContactSection = () => {
                             type="text"
                             {...field}
                             placeholder="Name"
-                            className="w-full p-3 rounded-2xl shadow-sm bg-white/80 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="w-full p-3 rounded-lg shadow-sm bg-white/80 focus:outline-none focus:ring-2 focus:ring-red-400"
                           />
                           {meta.touched && meta.error && (
                             <div className="error text-sm text-red-500 mt-2">
@@ -82,7 +82,7 @@ const ContactSection = () => {
                             type="email"
                             {...field}
                             placeholder="Email"
-                            className="w-full p-3 rounded-2xl shadow-sm bg-white/80 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="w-full p-3 rounded-lg shadow-sm bg-white/80 focus:outline-none focus:ring-2 focus:ring-red-400"
                           />
                           {meta.touched && meta.error && (
                             <div className="error text-sm text-red-500 mt-2">
@@ -101,7 +101,7 @@ const ContactSection = () => {
                           type="text"
                           {...field}
                           placeholder="Company"
-                          className="w-full p-3 rounded-2xl shadow-sm bg-white/80 mt-5 focus:outline-none focus:ring-2 focus:ring-red-400"
+                          className="w-full p-3 rounded-lg shadow-sm bg-white/80 mt-5 focus:outline-none focus:ring-2 focus:ring-red-400"
                         />
                         {meta.touched && meta.error && (
                           <div className="error text-sm text-red-500 mt-2">
@@ -118,7 +118,7 @@ const ContactSection = () => {
                           type="number"
                           {...field}
                           placeholder="Phone"
-                          className="w-full p-3 rounded-2xl shadow-sm bg-white/80 mt-5 focus:outline-none focus:ring-2 focus:ring-red-400"
+                          className="w-full p-3 rounded-lg shadow-sm bg-white/80 mt-5 focus:outline-none focus:ring-2 focus:ring-red-400"
                         />
                         {meta.touched && meta.error && (
                           <div className="error text-sm text-red-500 mt-2">
@@ -136,7 +136,7 @@ const ContactSection = () => {
                           type="text"
                           {...field}
                           placeholder="Message"
-                          className="w-full p-3 rounded-2xl shadow-sm bg-white/80 mt-5 h-32 focus:outline-none focus:ring-2 focus:ring-red-400"
+                          className="w-full p-3 rounded-lg shadow-sm bg-white/80 mt-5 h-32 focus:outline-none focus:ring-2 focus:ring-red-400"
                         />
                         {meta.touched && meta.error && (
                           <div className="error">{meta.error}</div>

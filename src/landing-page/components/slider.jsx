@@ -2,9 +2,12 @@ import React, { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useGetArticles from "../../hooks/queries/article/getArticles";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const SliderSection = () => {
   const sliderRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const { data } = useGetArticles({
     condition: true,
@@ -49,8 +52,10 @@ const SliderSection = () => {
             {data?.data?.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[350px] max-w-[350px] 
-      bg-[#E9EFF5] rounded-xl p-5 shadow-sm"
+                onClick={() => navigate(`/article/${item.id}`)}
+                className="min-w-[350px] max-w-[350px]
+                   bg-[#E9EFF5] rounded-xl p-5 shadow-sm
+                   cursor-pointer hover:shadow-lg transition"
               >
                 <img
                   src={`https://cms.i3gis.id/${item.attributes.image.data[0].attributes.url}`}
