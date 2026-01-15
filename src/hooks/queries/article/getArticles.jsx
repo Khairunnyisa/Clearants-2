@@ -3,7 +3,7 @@ import handlingError from "../../../utils/errorHandling";
 import { apiUrl } from "../../../api/baseUrl";
 
 const useGetArticles = ({
-  condition = false,
+  condition = true,
   limit = 9,
   page = 1,
   searchValue = "",

@@ -27,7 +27,10 @@ export default function ArticleList({ searchValue }) {
         {articles.map((item) => (
           <div
             key={item.id}
-            className="bg-white grey-outline rounded-xl overflow-hidden flex h-[180px] cursor-pointer"
+            className=" bg-white grey-outline rounded-xl overflow-hidden
+    flex flex-col sm:flex-row
+    sm:h-[180px]
+    cursor-pointer"
             onClick={() => navigate(`/article/${item.id}`)}
           >
             {/* Image */}

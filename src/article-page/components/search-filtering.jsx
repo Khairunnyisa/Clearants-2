@@ -56,7 +56,7 @@ export default function Filtering({ searchValue, setSearchValue }) {
   ];
 
   return (
-    <aside className="w-full md:w-[500px] flex-shrink-0 space-y-6">
+    <aside className="w-full lg:w-[360px] flex-shrink-0 space-y-6">
       {/* SEARCH */}
       <div className="flex items-center gap-2 bg-white grey-outline px-3 py-5 rounded-lg">
         <Search size={18} className="secondary" />
