@@ -6,7 +6,7 @@ export function Asoc() {
   return (
     <div className="w-full overflow-visible">
       <AsocHero />
-      <Timeline />
+      <  Timeline />
     </div>
   );
 }

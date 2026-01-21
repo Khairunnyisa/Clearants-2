@@ -1,3 +1,7 @@
+import CardBackgroundPath from "../../../../components/cards/cardBackgroundPath";
+import DynamicCardPath from "../../../../components/cards/cardDynamic";
+import ScanCardPath from "../../../../components/cards/cardDynamic";
+
 export default function DynamicSecurity() {
   return (
     <div className="space-y-6">
@@ -49,24 +53,58 @@ export default function DynamicSecurity() {
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
         <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
-          <div className="flex flex-col gap-3 h-full">
-            <div className="relative flex-1 overflow-hidden">
-              <img
-                src="images/content/module/web-scan.png"
-                alt="Website Scan"
-                className="inset-0 w-full h-full "
-              />
-            </div>
-
-            <div className="relative flex-1 overflow-hidden ">
-              <img
-                src="images/content/module/api-scan.png"
-                alt="API Scan"
-                className=" inset-0 w-full h-full "
-              />
-            </div>
-          </div>
+  <div className="flex flex-col gap-4 h-full">
+    {/* WEBSITE SCAN */}
+    <div className="flex-1">
+      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+        <div className="absolute inset-0">
+           <DynamicCardPath
+            fill="#EEF2F7"
+            borderRadius={10}
+            heightCorner={15}
+            tabWidth="30px"
+            tabStart="12vw"
+            tabPosition="left"
+          />
         </div>
+        <div className="relative z-10 p-6">
+          <h4 className="font-subtitle2 text-gray-900 mb-2">
+            Website Scan
+          </h4>
+          <p className="text-sm text-gray-500 max-w-md">
+            Website scanning for vulnerabilities and ensuring the app’s security.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* API SCAN */}
+    <div className="flex-1">
+      <div className="relative w-full h-full rounded-2xl overflow-hidden">
+        <div className="absolute inset-0">
+          <DynamicCardPath
+            fill="#EEF2F7"
+            borderRadius={10}
+            heightCorner={15}
+            tabWidth="30px"
+            tabStart="12vw"
+            tabPosition="right"
+          />
+        </div>
+        <div className="relative z-10 p-6 text-right ml-auto max-w-md">
+          <h4 className="font-subtitle2 text-gray-900 mb-2">
+            API Scan
+          </h4>
+          <p className="text-sm text-gray-500">
+            API scanning to discover vulnerabilities and ensure that the
+            information contained within the API is secure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <div className="relative h-[260px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-4">
           <div className="flex gap-3 h-full">

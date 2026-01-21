@@ -54,8 +54,27 @@ export default function ModulesSection() {
   return (
     <section id="modules" className="relative mt-[100px] mb-20">
       <div className="relative max-w-7xl mx-auto px-6 md:px-15">
+        {/* BACKGROUND CARD */}
         <div className="absolute inset-0 z-0">
-          <CardModules color="#E9EEF6" className="w-full h-full" />
+          {/* MOBILE */}
+          <div className="block md:hidden w-full h-full">
+            <CardModules
+              color="#E9EEF6"
+              className="w-full h-full"
+              tabWidth={330}
+              tabHeight={7}
+            />
+          </div>
+
+          {/* DESKTOP */}
+          <div className="hidden md:block w-full h-full">
+            <CardModules
+              color="#E9EEF6"
+              className="w-full h-full"
+              tabWidth={170}
+              tabHeight={20}
+            />
+          </div>
         </div>
 
         <div className="relative z-10 px-6 md:px-16 py-20 lg:py-32">
@@ -76,10 +95,11 @@ export default function ModulesSection() {
           {/* TABS */}
           <div
             className="flex
+   flex flex-col      
     gap-3
     mb-10
-    overflow-x-auto
-    scrollbar-hide
+
+    md:flex-row          
     md:flex-wrap
     md:justify-center"
           >
@@ -93,7 +113,7 @@ export default function ModulesSection() {
               <button
                 key={tab.id}
                 onClick={() => handleTabClick(tab.id)}
-                className={`px-5 py-2 rounded-full font-desc border transition-all ${
+                className={`px-5 py-2 rounded-full dont-desc border transition-all ${
                   activeTab === tab.id
                     ? "bg-red-500 text-white shadow-sm"
                     : "bg-white text-gray-600 hover:text-gray-900"

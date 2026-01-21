@@ -49,14 +49,14 @@ const Hero = () => {
             </p>
 
             <button
-  onClick={() => {
-    const section = document.getElementById("contact");
-    section?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="btn-primary py-3 px-7 rounded-lg"
->
-  Live Demo
-</button>
+              onClick={() => {
+                const section = document.getElementById("contact");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn-primary py-3 px-7 rounded-lg"
+            >
+              Live Demo
+            </button>
 
             <div className="flex justify-center md:justify-start items-center gap-8 pt-6">
               <div>
@@ -136,10 +136,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
-
-   
-
-    
   );
 };
 

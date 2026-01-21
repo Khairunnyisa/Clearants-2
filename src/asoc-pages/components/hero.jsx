@@ -1,5 +1,6 @@
 import React from "react";
 import CardBackgroundPath from "../../components/cards/cardBackgroundPath";
+import { WavyBackground } from "../../testbg";
 
 const AsocHero = () => {
   return (
@@ -13,10 +14,10 @@ const AsocHero = () => {
             tabWidth={80}
             tabStart="55.3vw"
             isFlippedVertical={true}
-            fill="#0B111C"
           />
         </div>
 
+<WavyBackground/>
         <div className="relative z-10 max-w-7xl mx-auto h-[88vh] py-24 px-12 xl:px-0">
           <div className="flex flex-col md:flex-row items-center justify-between h-full gap-20">
             <div className="md:w-1/2 space-y-6 text-center md:text-left">
