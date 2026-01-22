@@ -1,11 +1,11 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { MainLanding } from "../landing-page/main-landing";
 import { MainArticle } from "../article-page/main-article";
 import { DetailArticle } from "../detail-article/main-detailarticle";
 import { Asoc } from "../asoc-pages/main-asoc";
 import { Faq } from "../faq-page/main-faq";
 import MainLayout from "../MainLayout";
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
