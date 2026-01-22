@@ -13,7 +13,7 @@ export const router = createHashRouter([
       {
         path: "/article",
         children: [
-          { path: true, element: <MainArticle /> },
+          { path: "", element: <MainArticle /> },
           { path: ":articleId", element: <DetailArticle /> },
         ],
       },
