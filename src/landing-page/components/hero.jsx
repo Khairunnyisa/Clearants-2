@@ -75,16 +75,6 @@ const Hero = () => {
     sm:text-[32px]
     md:text-[45px]"
                 >
-                  4y
-                </p>
-                <p className="font-desc primary mt-1">Experience</p>
-              </div>
-              <div>
-                <p
-                  className="font-subtitle text-[28px]
-    sm:text-[32px]
-    md:text-[45px]"
-                >
                   1000+
                 </p>
                 <p className="font-desc primary mt-1">Projects</p>

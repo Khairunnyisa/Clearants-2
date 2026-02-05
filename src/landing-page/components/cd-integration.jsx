@@ -21,7 +21,7 @@ export default function CdIntegration() {
               CI/CD Integration
             </h2>
             <p className="font-body secondary">
-              Integrating i3gis with CI/CD tools can greatly enhance your
+              Integrating ClearAnts with CI/CD tools can greatly enhance your
               software development and deployment processes. By incorporating
               security and operational considerations throughout the development
               lifecycle.

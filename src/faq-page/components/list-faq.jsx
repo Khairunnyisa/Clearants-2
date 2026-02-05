@@ -9,7 +9,7 @@ const FaqList = () => {
 
   const { data, isLoading, error } = useGetFAQs({
     condition: true,
-    limit: 12,
+    limit: 10,
     page: page,
     searchValue: "",
   });

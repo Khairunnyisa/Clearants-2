@@ -1,3 +1,6 @@
+import CardBackgroundPath from "../../components/cards/cardBackgroundPath";
+import CardHeroArticle from "../../components/cards/cardHeroArticle";
+
 export default function ArticleHero() {
   return (
     <section className="w-full pt-30 pb-20 px-6 md:px-12">
@@ -8,17 +11,24 @@ export default function ArticleHero() {
         <p className="font-semibold">Articles</p>
       </div>
 
-      <div className="mx-auto relative">
-        <img
-          src="images/content/article/hero-article.png"
-          alt="Articles"
-          className="w-full object-cover"
-        />
+      <div className="mx-auto relative h-[360px]">
+  <div className="mx-auto relative h-[360px]">
+  <CardHeroArticle
+    image="/images/content/article/hero-article.png"
 
-        <h1 className="absolute bottom-8 left-10 font-subtitle white drop-shadow-lg">
-          Articles
-        </h1>
-      </div>
+    
+  />
+
+  <h1 className="absolute bottom-8 left-10 font-subtitle text-white drop-shadow-lg">
+    Articles
+  </h1>
+</div>
+
+
+  <h1 className="absolute bottom-8 left-10 font-subtitle text-white drop-shadow-lg">
+    Articles
+  </h1>
+</div>
 
     </section>
   );

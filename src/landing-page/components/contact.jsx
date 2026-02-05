@@ -36,7 +36,7 @@ const ContactSection = () => {
     md:text-[45px] leading-snug mb-10 max-w-xl"
             >
               Interested in seeing{" "}
-              <span className="text-red-500">Clearants</span> in flight?
+              <span className="text-red-500">ClearAnts</span> in flight?
             </h2>
 
             <div className="bg-white/70 p-8 rounded-2xl max-w-xl w-full relative z-20">

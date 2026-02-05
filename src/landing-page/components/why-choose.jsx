@@ -13,7 +13,7 @@ const WhyChoose = () => {
   const cardData = [
     {
       title: "End-to-End DevSecOps Solution",
-      desc: "i3GIS offers comprehensive DevSecOps solution to help business fulfill security standard in Indonesia.",
+      desc: "ClearAnts offers comprehensive DevSecOps solution to help business fulfill security standard in Indonesia.",
       icon: <CheckBadgeIcon className="size-6 text-white" />,
     },
     {
@@ -28,7 +28,7 @@ const WhyChoose = () => {
     },
     {
       title: "Focus on Customer Satisfaction",
-      desc: "As your business grows, i3GIS helps facilitate your feedback and feature requests to meet future needs.",
+      desc: "As your business grows, ClearAnts helps facilitate your feedback and feature requests to meet future needs.",
       icon: <PhoneIcon className="size-6 text-white" />,
     },
     {
@@ -59,7 +59,7 @@ const WhyChoose = () => {
     sm:text-[32px]
     md:text-[45px] mb-5 leading-tight"
               >
-                Why Choose i3GIS?
+                Why Choose ClearAnts?
               </h1>
               <p className="font-desc text-lg leading-relaxed max-w-md">
                 Your All-in-One DevSecOps Tool for Business Compliance

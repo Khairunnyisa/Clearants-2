@@ -111,7 +111,7 @@ export default function Navbar() {
     ASOC
     <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#EF4D5A] transition-all group-hover:w-full"></span>
   </a>
-  <a href="/article" className={`${linkColor} relative group`}>
+   <a href="/article" className={`${linkColor} relative group`}>
     Article
     <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#EF4D5A] transition-all group-hover:w-full"></span>
   </a>

@@ -1,23 +1,27 @@
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 import useGetArticles from "../../hooks/queries/article/getArticles";
 import moment from "moment";
 import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
-export default function ArticleList({ searchValue }) {
+export default function ArticleList({ searchValue, selectedCategories = [] }) {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
+
+  const categoryFilter =
+    selectedCategories.length > 0
+      ? `filters[article_category][id]=${selectedCategories[0]}`
+      : "";
 
   const { data, isLoading } = useGetArticles({
     condition: true,
     limit: 4,
     page,
-    searchValue: searchValue,
+    searchValue,
+    filters: categoryFilter,
   });
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+  if (isLoading) return <p>Loading...</p>;
 
   const articles = data?.data || [];
 

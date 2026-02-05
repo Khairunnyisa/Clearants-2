@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function DetailHero({ data }) {
   return (
-    <section className="w-full bg-white py-30">
+    <section className="w-full bg-white py-20">
       {/* HERO HEADER */}
       <div className="bg-[#E9F0F9] pt-12 pb-[400px]">
         <div className="max-w-5xl mx-auto text-center px-6 md:px-12">
           <p className="text-gray-600 text-sm mb-4">
-            <span className="opacity-70">Article</span>
+            <Link to="/article">
+              <span className="opacity-70 cursor-pointer">Back</span>
+            </Link>
             <span className="mx-2">›</span>
-            <span className="font-medium">Article Title</span>
+            <span className="font-medium">Article Content</span>
           </p>
 
           <h1 className="font-subtitle md:text-5xl  mb-6 leading-tight">

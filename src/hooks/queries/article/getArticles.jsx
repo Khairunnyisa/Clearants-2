@@ -4,16 +4,17 @@ import { apiUrl } from "../../../api/baseUrl";
 
 const useGetArticles = ({
   condition = true,
-  limit = 9,
+  limit = 4,
   page = 1,
   searchValue = "",
+  filters = "",
 }) => {
   const { data, isLoading, error, refetch } = useQuery({
-    queryKey: ["articles", page, limit, searchValue],
+    queryKey: ["articles", page, limit, searchValue, filters],
     queryFn: async () => {
       try {
         const res = await apiUrl.get(
-          `/api/articles?populate=*&pagination[page]=${page}&pagination[pageSize]=${limit}&filters[title][$contains]=${searchValue}&sort=createdAt:desc`
+          `/api/articles?populate=*&pagination[page]=${page}&pagination[pageSize]=${limit}&filters[title][$contains]=${searchValue}&sort=createdAt:desc&${filters}`
         );
 
         return res.data;
