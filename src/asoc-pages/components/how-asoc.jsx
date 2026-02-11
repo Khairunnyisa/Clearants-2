@@ -12,7 +12,9 @@ const fadeUpVariant = {
 
 const TimelineStep = ({ image, title, description, reverse }) => {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-20 items-center py-20 relative`}>
+    <div
+      className={`grid grid-cols-1 md:grid-cols-2 gap-20 items-center py-20 relative`}
+    >
       {reverse ? (
         <>
           <motion.div
@@ -100,20 +102,33 @@ const Timeline = () => {
   return (
     <section className="relative w-full bg-white pt-56 pb-40">
       <div className="-mt-60 relative">
-        {/* TITLE SECTION */}
         <div className="w-full flex flex-col items-center text-center mb-20">
           <h2 className="font-title md:text-4xl font-bold text-black">
             How <span className="text-red-600">ASOC</span> Work
           </h2>
           <p className="text-gray-700 mt-3 leading-relaxed font-desc md:text-base max-w-[700px]">
-            ASOC simplifies and streamlines your application security process by integrating powerful DevSecOps tools in a seamless, automated workflow.
+            ASOC simplifies and streamlines your application security process by
+            integrating powerful DevSecOps tools in a seamless, automated
+            workflow.
           </p>
         </div>
 
-        {/* GARIS TENGAH */}
-        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 mt-24 w-[4px] h-full bg-gradient-to-b from-[#FF5A5A] to-[#D7DCE2]"></div>
+        <div className="relative max-w-[1500px] mx-auto px-6">
+          <div
+            className="
+      absolute
+      top-0
+      left-1/2
+      -translate-x-1/2
+      w-[4px]
+      h-full
+      bg-gradient-to-b
+      from-[#FF5A5A]
+      to-[#D7DCE2]
+      pointer-events-none
+    "
+          />
 
-        <div className="max-w-[1500px] mx-auto px-6">
           {steps.map((step, i) => (
             <TimelineStep
               key={i}

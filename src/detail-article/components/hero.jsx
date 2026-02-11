@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function DetailHero({ data }) {
   return (
     <section className="w-full bg-white py-20">
-      {/* HERO HEADER */}
       <div className="bg-[#E9F0F9] pt-12 pb-[400px]">
         <div className="max-w-5xl mx-auto text-center px-6 md:px-12">
           <p className="text-gray-600 text-sm mb-4">
@@ -63,12 +62,11 @@ export default function DetailHero({ data }) {
         </div>
       </div>
 
-      {/* IMAGE */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative -mt-75 z-10">
         <div className="rounded-sm overflow-hidden ">
           <img
             src={`https://cms.i3gis.id/${data?.data?.attributes?.image.data[0].attributes.url}`}
-            className="w-full h-full object-cover"
+            className="w-[1400px] h-[600px] object-cover "
             alt=""
           />
         </div>

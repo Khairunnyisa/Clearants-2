@@ -53,10 +53,8 @@ export default function ModulesSection() {
 
   return (
     <section id="modules" className="relative mt-[100px] mb-20">
-      <div className="relative max-w-7xl mx-auto px-6 md:px-15">
-        {/* BACKGROUND CARD */}
+      <div className="relative max-w-7xl mx-auto px-6 md:px-5">
         <div className="absolute inset-0 z-0">
-          {/* MOBILE */}
           <div className="block md:hidden w-full h-full">
             <CardModules
               color="#E9EEF6"
@@ -66,7 +64,6 @@ export default function ModulesSection() {
             />
           </div>
 
-          {/* DESKTOP */}
           <div className="hidden md:block w-full h-full">
             <CardModules
               color="#E9EEF6"
@@ -92,7 +89,6 @@ export default function ModulesSection() {
             </p>
           </div>
 
-          {/* TABS */}
           <div
             className="flex
    flex flex-col      
@@ -124,7 +120,7 @@ export default function ModulesSection() {
             ))}
           </div>
 
-          <div className="pb-10">{renderContent()}</div>
+          <div className=" min-h-[520px]">{renderContent()}</div>
         </div>
       </div>
     </section>

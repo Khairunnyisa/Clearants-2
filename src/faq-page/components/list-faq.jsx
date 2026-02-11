@@ -30,7 +30,7 @@ const FaqList = () => {
   }
 
   return (
-    <div className="w-full max-w-[1550px] mx-auto px-6 mt-10">
+    <div className="max-w-7xl mx-auto px-8 xl:px-0 mt-8 relative">
       <div className="flex flex-col gap-5">
         {rows.map((row, rowIndex) => (
           <div

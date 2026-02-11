@@ -1,69 +1,99 @@
-import React from "react";
-
-const articles = [
-  {
-    id: 1,
-    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
-    date: "APPSEC - NOV 12, 2023",
-    title: "Lorem ipsum he le consectetur elit sit amet.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat...",
-  },
-  {
-    id: 2,
-    img: "https://images.unsplash.com/photo-1604076913837-52ab5629fba3?q=80&w=1200",
-    date: "APPSEC - NOV 12, 2023",
-    title: "Lorem ipsum he le consectetur elit sit amet.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat...",
-  },
-  {
-    id: 3,
-    img: "https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1200",
-    date: "APPSEC - NOV 12, 2023",
-    title: "Lorem ipsum he le consectetur elit sit amet.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat...",
-  },
-  {
-    id: 4,
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200",
-    date: "APPSEC - NOV 12, 2023",
-    title: "Lorem ipsum he le consectetur elit sit amet.",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat volutpat...",
-  },
-];
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import moment from "moment";
+import useGetArticles from "../../hooks/queries/article/getArticles";
+import { motion, useAnimation } from "framer-motion";
 
 export default function CardDetailArticle() {
-  return (
-    <section className="py-10">
-      <h2 className="text-center font-subtitle mb-8">Read More</h2>
+  const navigate = useNavigate();
+  const controls = useAnimation();
 
-      <div className="relative overflow-hidden">
-        {/* wrapper untuk scroll */}
-        <div className="flex w-max animate-marquee gap-6">
+  const { data } = useGetArticles({
+    condition: true,
+    limit: 10,
+    page: 1,
+    searchValue: "",
+  });
+
+  const articles = data?.data || [];
+
+  useEffect(() => {
+    if (!articles.length) return;
+
+    controls.start({
+      x: "-50%",
+      transition: {
+        duration: 30,
+        ease: "linear",
+        repeat: Infinity,
+      },
+    });
+  }, [articles, controls]);
+
+  return (
+    <section className="py-16 overflow-hidden">
+      <h2 className="text-center font-subtitle mb-10">Read More</h2>
+
+      <div className="relative w-full ">
+        <motion.div
+          className="flex gap-6 w-max"
+          animate={controls}
+          onHoverStart={() => controls.stop()}
+          onHoverEnd={() =>
+            controls.start({
+              x: "-50%",
+              transition: {
+                duration: 30,
+                ease: "linear",
+                repeat: Infinity,
+              },
+            })
+          }
+        >
           {[...articles, ...articles].map((item, index) => (
-            <div
-              key={index}
-              className="w-[280px] bg-[#061025] rounded-xl overflow-hidden shadow-lg"
+            <motion.div
+              key={`${item.id}-${index}`}
+              onClick={() => navigate(`/article/${item.id}`)}
+              whileHover={{ y: -8 }}          
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="
+                bg-[#E9EFF5]
+                rounded-2xl
+                p-5
+                cursor-pointer
+                shadow-sm
+                hover:shadow-lg
+                w-[320px]
+                flex-shrink-0
+              "
             >
               <img
-                src={item.img}
-                alt=""
-                className="h-40 w-full object-cover"
+                src={`https://cms.i3gis.id/${item.attributes.image.data[0].attributes.url}`}
+                alt={item.attributes.title}
+                className="w-full h-[180px] object-cover rounded-xl"
               />
 
-              <div className="p-4 text-white">
-                <p className="text-xs opacity-70 mb-2">{item.date}</p>
-                <h3 className="font-semibold leading-snug mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm opacity-80 line-clamp-3">{item.desc}</p>
-              </div>
-            </div>
+              <p className="font-desc text-gray-600 mt-4 text-sm">
+                {moment(item.attributes.publishedAt).format("MMM DD, YYYY")}
+              </p>
+
+              <h3 className="font-subtitle2 text-[16px] mt-2 line-clamp-2">
+                {item.attributes.title}
+              </h3>
+
+              <p className="font-desc secondary mt-3 line-clamp-3 text-sm">
+                {item.attributes.description}
+              </p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="text-center mt-8">
-        <button className="font-subtitle2 hover:underline flex items-center justify-center gap-2 mx-auto">
+      <div className="text-center mt-10">
+        <button
+          onClick={() => navigate("/article")}
+          className="font-subtitle2 text-[18px] hover:underline inline-flex items-center gap-2"
+        >
           View More →
         </button>
       </div>

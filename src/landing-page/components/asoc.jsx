@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AsocSection() {
   return (
@@ -38,16 +39,20 @@ export default function AsocSection() {
               protection.
             </p>
 
-            <button
-              className="
-              bg-white text-[#E94E59] 
-              px-10 py-3 rounded-full 
-              text-lg font-semibold 
-              hover:bg-gray-100 transition shadow-md
-            "
-            >
-              Learn More
-            </button>
+
+<Link
+  to="/asoc"
+  className="
+    inline-flex items-center justify-center
+    bg-white text-[#E94E59] 
+    px-10 py-3 rounded-full 
+    text-lg font-semibold 
+    hover:bg-gray-100 transition shadow-md
+  "
+>
+  Learn More
+</Link>
+
           </div>
 
           <img

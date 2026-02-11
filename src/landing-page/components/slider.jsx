@@ -75,9 +75,9 @@ const SliderSection = () => {
           >
             {data?.data?.map((item) => (
               <div
-  key={item.id}
-  onClick={() => navigate(`/article/${item.id}`)}
-  className="
+                key={item.id}
+                onClick={() => navigate(`/article/${item.id}`)}
+                className="
     flex-shrink-0
     snap-center
 
@@ -93,23 +93,22 @@ const SliderSection = () => {
     transition
     scale-90 md:scale-100  /* mobile lebih kecil, desktop normal */
   "
->
-  <img
-    src={`https://cms.i3gis.id/${item.attributes.image.data[0].attributes.url}`}
-    className="w-full h-[200px] object-cover rounded-xl"
-    alt={item.attributes.title}
-  />
-  <p className="font-desc text-gray-700 mt-4">
-    {moment(item.attributes.publishedAt).format("MMM DD, YYYY")}
-  </p>
-  <h3 className="font-subtitle2 text-lg mt-2 line-clamp-2">
-    {item.attributes.title}
-  </h3>
-  <p className="font-desc secondary mt-3 line-clamp-3">
-    {item.attributes.description}
-  </p>
-</div>
-
+              >
+                <img
+                  src={`https://cms.i3gis.id/${item.attributes.image.data[0].attributes.url}`}
+                  className="w-full h-[200px] object-cover rounded-xl"
+                  alt={item.attributes.title}
+                />
+                <p className="font-desc text-gray-700 mt-4">
+                  {moment(item.attributes.publishedAt).format("MMM DD, YYYY")}
+                </p>
+                <h3 className="font-subtitle2 text-lg mt-2 line-clamp-2">
+                  {item.attributes.title}
+                </h3>
+                <p className="font-desc secondary mt-3 line-clamp-3">
+                  {item.attributes.description}
+                </p>
+              </div>
             ))}
           </div>
 

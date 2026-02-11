@@ -35,12 +35,9 @@ export default function InfrastructureSecurity() {
 
       <div className="grid grid-cols-1 md:grid-cols-[2fr] gap-6">
         <div className="relative rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden p-8 md:p-5">
-          {/* -------- */}
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-            {/* Kotak 1 */}
-            <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+            <div className="bg-gray-100 rounded-[10px] p-3">
+              <h3 className="font-subtitl-desc font-bold mb-1 text-gray-900">
                 Playbook Management
               </h3>
               <p className="text-sm text-gray-500">
@@ -49,21 +46,8 @@ export default function InfrastructureSecurity() {
               </p>
             </div>
 
-            {/* Kotak 2 */}
-            <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
-                Credentials Management
-              </h3>
-              <p className="text-sm text-gray-500">
-                Securely store, access, and rotate credentials using encrypted
-                vaults and role-based access control. Prevent unauthorized
-                access and reduce the risk of credential leaks.
-              </p>
-            </div>
-
-            {/* Kotak 3 */}
-            <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+            <div className="bg-gray-100 rounded-[10px] p-3">
+              <h3 className="font-subtitl-desc font-bold mb-1 text-gray-900">
                 Pre-Harden
               </h3>
               <p className="text-sm text-gray-500">
@@ -73,9 +57,19 @@ export default function InfrastructureSecurity() {
               </p>
             </div>
 
-            {/* Kotak 4 */}
-            <div className="bg-gray-100 rounded-2xl p-4">
-              <h3 className="font-subtitl-desc font-bold mb-2 text-gray-900">
+            <div className="bg-gray-100 rounded-[10px] p-3">
+              <h3 className="font-subtitl-desc font-bold mb-1 text-gray-900">
+                Credentials Management
+              </h3>
+              <p className="text-sm text-gray-500">
+                Securely store, access, and rotate credentials using encrypted
+                vaults and role-based access control. Prevent unauthorized
+                access and reduce the risk of credential leaks.
+              </p>
+            </div>
+
+            <div className="bg-gray-100 rounded-[10px] p-3">
+              <h3 className="font-subtitl-desc font-bold mb-1 text-gray-900">
                 Harden
               </h3>
               <p className="text-sm text-gray-500">
